@@ -8,8 +8,8 @@ aliases:
   - Note Narrator docs
 publish: true
 permalink: note-narrator
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Note Narrator
@@ -30,7 +30,7 @@ Note Narrator is an Obsidian plugin that **reads your notes aloud** using text t
 - Starts playing after the first short chunk is ready, and keeps generating the rest while you listen. See [[Long Notes and Chunking]].
 - Saves audio to your vault and tracks whether it is still up to date. See [[Saving Audio]].
 - Highlights what is being read and scrolls the note to it. See [[Highlighting and Scrolling]].
-- Keeps generating other notes in the background. See [[Background Generation]].
+- Generates notes in the background without playing them, ready to listen to later. See [[Background Generation]].
 
 ## Documentation map
 

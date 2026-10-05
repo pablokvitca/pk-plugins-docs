@@ -7,8 +7,8 @@ tags:
   - performance
 publish: true
 permalink: note-narrator/settings/performance
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Performance Settings
@@ -22,7 +22,7 @@ The **Performance** tab controls how quickly playback starts.
 
 | Setting | Default | Greyed out when | What it does |
 | --- | --- | --- | --- |
-| **Keep generating when starting another note** | Enabled | never | Starting a read (or Play saved) on a *different* note while one is still generating moves the current one to the background instead of discarding it, the same as pressing **Background**. Re-reading the same note is unaffected -- that still restarts fresh. See [[Background Generation]] |
+| **Keep generating when starting another note** | Enabled | never | Starting a read (or Play saved) on a *different* note while one is still generating moves the current one to the background instead of discarding it, the same as pressing **Move to background**. Re-reading the same note is unaffected: that still restarts fresh. Selection reads are never moved. See [[Background Generation]] |
 | **Start playback immediately** | Enabled | never | Plays as soon as the first chunk is ready, instead of waiting for the whole note |
 | **Quick start** | Enabled | Start immediately is off | Makes the first chunk artificially short (including the title and properties preamble) so playback starts sooner |
 | **Quick start unit** | Words | Start immediately or Quick start is off | Size the first chunk in **Words** or **Characters** |
