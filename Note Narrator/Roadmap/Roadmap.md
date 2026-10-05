@@ -18,6 +18,7 @@ updated: 2026-10-05
 ## Recently shipped
 
 - **1.1.0: generate in background.** Generate a note's audio in the background without starting a read first, from the panel's **Generate in background** button or the new **Generate note audio in background** command. The button follows the note: **Move to background** while it is reading, **Regenerate in background** when its saved audio is up to date, and **Ready in background** once its job has finished. Finished jobs can be cleared from the list, and deleting a note or its saved audio removes its job. Also fixed: pausing while the current part is still generating now stays paused, and audio for a note edited while it was generating no longer shows as up to date. See [[Background Generation]]. Also in 1.1.0: when the note title exactly matches its first heading, the title is no longer read twice (see **Skip title when it repeats the first heading** on [[General Settings]]).
+- **Note Narrator is in Obsidian's community plugin directory.** Install it from **Settings → Community plugins → Browse** instead of BRAT. See [[Installation]].
 - **1.0.0.** No user-facing changes over 0.17.1. It hardens the release process: the built `main.js` and `styles.css` now carry a GitHub build-provenance attestation, so anyone can verify they came from this repository's own source; a CSS rule was adjusted to drop a browser-support warning; and a type-resolution dependency (`moment`) is now declared directly instead of arriving indirectly through Obsidian's own package.
 - **0.17.1:** keep generating the current note in the background when you start reading another one (on by default, see [[Background Generation]]); repaint the editor highlight immediately when a highlight setting changes; the note's toolbar icon and the panel's Regenerate label update correctly when switching notes; the custom save folder can no longer be pointed outside the vault; invalid or iOS-unsupported "Skip sections by heading" patterns are flagged as you type
 - **0.17.0: providers and narrator profiles.** The settings screen is reorganised into six tabs (General, Providers, Profiles, Appearance, Performance, Files). Providers hold API keys and parallel-generation limits, and you can add several, even of the same type. Narrator profiles bundle a provider, voice settings, a dropdown toggle and optional reading overrides, and replace the old voice list and panel voices shortlist. Settings that do not apply are greyed out instead of hidden, and saving audio now turns on linking by default
@@ -31,18 +32,16 @@ updated: 2026-10-05
 - Mobile support: tested on iPhone, iPad, iPad mini and visionOS, with touch-sized controls
 - Configurable rewind and skip amounts and compact buttons
 
-## Toward the community directory
+## What's still ahead
 
-1.0.0 is a version number, not a feature-complete milestone -- it marks the plugin as ready to publish in Obsidian's community directory, not the end of this list. Some of the original "toward 1.0" goals are still ahead:
+1.0.0 was a version number, not a feature-complete milestone. A few of the original "toward 1.0" goals are still open:
 
-| Item | Why | Status |
-| --- | --- | --- |
-| **Documentation and screenshots** | This site | Done |
-| **Community plugin directory listing** | Install without BRAT | Not yet submitted |
-| **ElevenLabs credit usage and cost estimates** | Show remaining credits and an estimate before you read a long note | Not started |
-| **Other TTS providers** | Providers already have a type and per-type settings, so this means implementing more types than ElevenLabs. Google Gemini is next. See [[Supported Platforms]] | Not started |
-| **Local or offline voices** | Apple OS (Local) first: the text to speech built into macOS, iOS, iPadOS and visionOS. No key, no network, lower expressiveness. A local model may follow | Not started |
-| **Auto-caption images** | Use a vision model to give images a short spoken description instead of skipping them | Not started |
+| Item | Why |
+| --- | --- |
+| **ElevenLabs credit usage and cost estimates** | Show remaining credits and an estimate before you read a long note |
+| **Other TTS providers** | Providers already have a type and per-type settings, so this means implementing more types than ElevenLabs. Google Gemini is next. See [[Supported Platforms]] |
+| **Local or offline voices** | Apple OS (Local) first: the text to speech built into macOS, iOS, iPadOS and visionOS. No key, no network, lower expressiveness. A local model may follow |
+| **Auto-caption images** | Use a vision model to give images a short spoken description instead of skipping them |
 
 ## After 1.0
 
