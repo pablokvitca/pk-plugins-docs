@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Saving Audio
@@ -66,7 +66,7 @@ Opening a note silently regenerates and saves its audio if it is missing or outd
 
 ## Clearing
 
-**Clear Note Narrator files** (panel **⋮** menu, or the delete button on the status line) removes a note's audio file and its properties after a confirmation. The file goes to the trash according to your vault's deletion preference. The properties cannot be restored.
+**Clear Note Narrator files** (panel **⋮** menu, or the delete button on the status line) removes a note's audio file and its properties after a confirmation. The file goes to the trash according to your vault's deletion preference. The properties cannot be restored. If the note has a finished background job, it is cleared from the list too. One still generating is kept, and its new audio is saved when it finishes.
 
 If a linked file is deleted or moved outside Note Narrator, the plugin can quietly remove the stale properties so the note does not show a misleading "outdated" status. That is **Auto-clean up properties when saved file is missing** (enabled by default).
 

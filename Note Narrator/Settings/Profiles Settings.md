@@ -7,8 +7,8 @@ tags:
   - profiles
 publish: true
 permalink: note-narrator/settings/profiles
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Profiles Settings
@@ -67,6 +67,7 @@ Each row is a dropdown that starts on **Use default (...)**, showing the current
 | Override | Choices | Greyed out when |
 | --- | --- | --- |
 | Read note title | Use default, On, Off | never |
+| Skip title when it repeats the first heading | Use default, On, Off | Read note title is off (effective value) |
 | Read note properties | Use default, On, Off | never |
 | Skip Markdown comments | Use default, On, Off | never |
 | Don't read comment delimiter symbols | Use default, On, Off | Comments are skipped (effective value) |

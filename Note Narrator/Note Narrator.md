@@ -8,8 +8,8 @@ aliases:
   - Note Narrator docs
 publish: true
 permalink: note-narrator
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Note Narrator
@@ -30,7 +30,7 @@ Note Narrator is an Obsidian plugin that **reads your notes aloud** using text t
 - Starts playing after the first short chunk is ready, and keeps generating the rest while you listen. See [[Long Notes and Chunking]].
 - Saves audio to your vault and tracks whether it is still up to date. See [[Saving Audio]].
 - Highlights what is being read and scrolls the note to it. See [[Highlighting and Scrolling]].
-- Keeps generating other notes in the background. See [[Background Generation]].
+- Generates notes in the background without playing them, ready to listen to later. See [[Background Generation]].
 
 ## Documentation map
 
@@ -65,7 +65,7 @@ Note Narrator is an Obsidian plugin that **reads your notes aloud** using text t
 - [[Roadmap]]: what is next and what is being considered
 
 > [!info] About this documentation
-> These docs describe version **1.0**. If you are on 0.16.x, the settings screen looks different from these pages -- 0.17 reorganised it around providers and narrator profiles. Something wrong or missing? Open an issue on the [GitHub repository](https://github.com/pablokvitca/note-narrator).
+> These docs describe version **1.1**. If you are on 0.16.x, the settings screen looks different from these pages -- 0.17 reorganised it around providers and narrator profiles. Something wrong or missing? Open an issue on the [GitHub repository](https://github.com/pablokvitca/note-narrator).
 
 > [!note] Independent project
 > Note Narrator is an independent project. It is not affiliated with, endorsed by, or sponsored by Obsidian or ElevenLabs. "Obsidian" and "ElevenLabs" are trademarks of their respective owners and are used here only to describe what the plugin works with. See [[Privacy and Network Use]] for how your data is handled.

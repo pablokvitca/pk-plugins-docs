@@ -6,8 +6,8 @@ tags:
   - settings
 publish: true
 permalink: note-narrator/settings/overview
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Settings Overview
@@ -44,6 +44,7 @@ Open **Settings, Note Narrator**. A tab bar at the top switches between six sect
 | Reading overrides | None (inherit General) |
 | Read selection instead of whole note | Enabled |
 | Read note title / properties | Enabled / Disabled |
+| Skip title when it repeats the first heading | Enabled |
 | Skip Markdown comments | Enabled |
 | Text chunker / Max heading depth | Markdown-aware / 2 |
 | Default playback speed | 1x |

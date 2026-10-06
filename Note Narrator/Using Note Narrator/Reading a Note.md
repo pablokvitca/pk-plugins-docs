@@ -6,8 +6,8 @@ tags:
   - usage
 publish: true
 permalink: note-narrator/using/reading-a-note
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.0
+updated: 2026-10-05
 ---
 
 # Reading a Note
@@ -32,7 +32,7 @@ Before text goes to ElevenLabs, Markdown is cleaned up so it is not spoken liter
 
 In order, the spoken text can include:
 
-1. **The note title**, if **Read note title** is on (default on).
+1. **The note title**, if **Read note title** is on (default on), unless it exactly matches the note's first heading and **Skip title when it repeats the first heading** is on (default on), in which case the title is left out and only the heading is heard, once, as part of the body.
 2. **The properties**, if **Read note properties** is on (default off). This says "Properties", then each key and value, then "Content".
 3. **The note body**, minus anything you chose to skip.
 

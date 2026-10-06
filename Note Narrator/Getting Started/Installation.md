@@ -12,9 +12,6 @@ updated: 2026-09-27
 
 # Installation
 
-> [!warning] Not in the community plugin store yet
-> Note Narrator is not published to Obsidian's community plugin directory yet (see [[Roadmap]]). Install it with BRAT or by hand.
-
 ## Requirements
 
 | Requirement | Details |
@@ -24,9 +21,17 @@ updated: 2026-09-27
 | Account | An [ElevenLabs](https://elevenlabs.io) account and API key |
 | Network | Internet access to `api.elevenlabs.io` when you read or regenerate. See [[Privacy and Network Use]] |
 
-## Option 1: BRAT (recommended)
+## Option 1: Community plugins (recommended)
 
-[BRAT](https://github.com/TfTHacker/obsidian42-brat) installs plugins straight from GitHub and updates them for you.
+Note Narrator is in Obsidian's community plugin directory.
+
+1. Open **Settings → Community plugins → Browse**.
+2. Search for **Note Narrator** and select **Install**.
+3. Enable it.
+
+## Option 2: BRAT
+
+[BRAT](https://github.com/TfTHacker/obsidian42-brat) installs plugins straight from GitHub and updates them for you. Use this if you want beta builds ahead of the community directory.
 
 1. Install and enable **Obsidian42 - BRAT** from Community plugins.
 2. Open the command palette and run **BRAT: Add a beta plugin for testing**.
@@ -38,7 +43,7 @@ updated: 2026-09-27
 
 ![[install-brat-add-plugin.png]]
 
-## Option 2: Manual install
+## Option 3: Manual install
 
 1. Download `main.js`, `manifest.json` and `styles.css` from the latest release on GitHub.
 2. Copy them into `YourVault/.obsidian/plugins/note-narrator/`.
