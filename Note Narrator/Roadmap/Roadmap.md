@@ -6,8 +6,8 @@ tags:
   - roadmap
 publish: true
 permalink: note-narrator/roadmap
-plugin-version: 1.1.2
-updated: 2026-10-06
+plugin-version: 1.1.3
+updated: 2026-10-07
 ---
 
 # Roadmap
@@ -17,6 +17,7 @@ updated: 2026-10-06
 
 ## Recently shipped
 
+- **1.1.3: fixes.** Deleting a note while its audio file is being written no longer leaves that file behind or shows a "Failed to save audio file" notice. If you disable the plugin or select **Read** at that moment instead, the finished audio is still saved and linked. Also more automated tests for the panel, the plugin's commands, and folders being moved or deleted.
 - **1.1.2: fixes.** Selecting **Read** or **Background** for a note that **Auto-generate on open** is still generating now takes over from it instead of generating the note a second time, and deleting the note stops it without leaving an audio file behind. After you switch narrator profile, the panel's status line says when a note's saved audio was made with a different narrator, and the toolbar icon only shows its check badge for audio that matches the selected narrator. The Files setting now quotes the **Clear Note Narrator files** menu item as it appears.
 - **1.1.1: fixes.** The background button is now labelled just **Background** (hover for whether it generates or regenerates). The note title is read together with the start of the note instead of as a tiny first part followed by a pause. Read and **Background** work after you close the note's tab. Cancelling a read (or disabling the plugin) no longer saves its audio, deleting a note while it is being read no longer leaves an audio file or a background card behind, and **Auto-generate on open** no longer generates a note that is already being read or generated, and stops when you disable the plugin. Unit tests now run on every build.
 - **1.1.0: generate in background.** Generate a note's audio in the background without starting a read first, from the panel's **Generate in background** button or the new **Generate note audio in background** command. The button follows the note: **Move to background** while it is reading, **Regenerate in background** when its saved audio is up to date, and **Ready in background** once its job has finished. Finished jobs can be cleared from the list, and deleting a note or its saved audio removes its job. Also fixed: pausing while the current part is still generating now stays paused, and audio for a note edited while it was generating no longer shows as up to date. See [[Background Generation]]. Also in 1.1.0: when the note title exactly matches its first heading, the title is no longer read twice (see **Skip title when it repeats the first heading** on [[General Settings]]).
