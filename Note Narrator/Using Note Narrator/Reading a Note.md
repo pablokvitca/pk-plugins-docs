@@ -6,8 +6,8 @@ tags:
   - usage
 publish: true
 permalink: note-narrator/using/reading-a-note
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Reading a Note
@@ -35,6 +35,8 @@ In order, the spoken text can include:
 1. **The note title**, if **Read note title** is on (default on), unless it exactly matches the note's first heading and **Skip title when it repeats the first heading** is on (default on), in which case the title is left out and only the heading is heard, once, as part of the body.
 2. **The properties**, if **Read note properties** is on (default off). This says "Properties", then each key and value, then "Content".
 3. **The note body**, minus anything you chose to skip.
+
+The title and properties are spoken as part of the first part of the note, never as a part on their own, so playback flows straight into the note even when it starts with a heading.
 
 > [!note] Selections
 > With **Read selection instead of whole note** on (default on), an active text selection is read on its own, without the title or properties. Highlighting and scroll-to-current do not apply to selection reads.
