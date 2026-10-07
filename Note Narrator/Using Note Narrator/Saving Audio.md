@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.2
+updated: 2026-10-06
 ---
 
 # Saving Audio
@@ -38,6 +38,9 @@ The hash lets the panel tell you whether the audio still matches the note:
 > [!warning] Saved audio is outdated
 > The note has changed. **Read** becomes **Regenerate**. Play saved still plays the old audio.
 
+> [!warning] Saved audio was made with a different narrator
+> The note has not changed, but the selected narrator profile's voice settings differ from the ones the audio was made with. **Read** becomes **Regenerate with new narrator**. Play saved still plays the old audio.
+
 > [!note] Everything counts
 > The hash covers the note's full content, even if you only read a selection, so any edit marks the audio outdated. Note Narrator's own properties are always excluded. Add other properties (for example a last-modified timestamp another plugin updates) to **Extra properties to exclude from staleness hashing**.
 
@@ -60,6 +63,8 @@ The hash lets the panel tell you whether the audio still matches the note:
 ## Auto-generate on open
 
 Opening a note silently regenerates and saves its audio if it is missing or outdated. It does not play and does not disturb anything already playing.
+
+If you select **Read** or **Background** for the note while it is still generating, that takes over: the auto-generation stops and nothing it generated is saved. Deleting the note also stops it, so no audio file is left behind.
 
 > [!danger] Costs credits
 > Every open of a missing or outdated note makes ElevenLabs requests. Be careful with notes you edit often.

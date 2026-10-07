@@ -7,7 +7,7 @@ tags:
   - panel
 publish: true
 permalink: note-narrator/using/the-panel
-plugin-version: 1.1.1
+plugin-version: 1.1.2
 updated: 2026-10-06
 ---
 
@@ -22,7 +22,7 @@ The panel lives in the right sidebar. Open it from the ribbon icon, the note too
 1. **Selected note.** A "Read: Note title" line for the note you are viewing. The panel follows the active note as you switch between notes. If a read is already in progress for a different note, a "Currently reading: Other note" line appears under it, so switching notes never hides what is playing.
 2. **Narrator.** Dropdown of your narrator profiles that have **Show in panel dropdown** on (plus the active one). Picking one makes it the active narrator. See [[Profiles Settings]].
 3. **Note stats.** Total characters, total chunks, and approximate average characters and words per chunk, computed as soon as a note is open, before you click anything.
-4. **Saved audio status.** Only when the note has linked audio. Shows a green "up to date" line or an amber "outdated" warning, with a small delete button for the saved file. See [[Saving Audio]].
+4. **Saved audio status.** Only when the note has linked audio. Shows a green "up to date" line, or an amber warning when the note changed ("outdated") or the audio was made with a different narrator, with a small delete button for the saved file. See [[Saving Audio]].
 5. **Action buttons.** See below.
 6. **Status, time and progress.** Elapsed, total and remaining time, "Part X of Y, Z% complete", and the generation bar.
 7. **Playback controls.** See [[Playback Controls]].
@@ -68,7 +68,6 @@ The **⋮** menu in the panel's title bar has **Clear Note Narrator files**, whi
 
 Each note has an audio-lines icon in its top-right toolbar (next to the **⋯** menu). It opens the panel.
 
-> [!info] Coming in 0.17
-> In the 0.17 beta the toolbar icon changes to a waveform with a check badge when the note has up-to-date saved audio, so you can tell at a glance.
+It changes to a waveform with a check badge when the note's saved audio is up to date with both the note and the selected narrator profile, so you can tell at a glance.
 
 ![[toolbar-icon-states.png]]
