@@ -7,7 +7,7 @@ tags:
   - profiles
 publish: true
 permalink: note-narrator/settings/profiles
-plugin-version: 1.1.1
+plugin-version: 1.1.2
 updated: 2026-10-06
 ---
 
@@ -87,7 +87,7 @@ Each row is a dropdown that starts on **Use default (...)**, showing the current
 
 ## How profiles affect saved audio
 
-Saved audio records a **fingerprint** of the profile's voice settings (provider type, voice, model, stability, similarity boost). Renaming a profile, moving it to another account, or changing reading overrides does not change it, but changing the voice, model or voice sliders does. If the selected profile's fingerprint differs from a note's saved audio, the Read button becomes **Regenerate with new narrator**. See [[Saving Audio]].
+Saved audio records a **fingerprint** of the profile's voice settings (provider type, voice, model, stability, similarity boost). Renaming a profile, moving it to another account, or changing reading overrides does not change it, but changing the voice, model or voice sliders does. If the selected profile's fingerprint differs from a note's saved audio, the Read button becomes **Regenerate with new narrator**, the panel's status line says the audio was made with a different narrator, and the note's toolbar icon loses its check badge. See [[Saving Audio]].
 
 > [!info] Coming later
 > Choosing a profile automatically by note folder is on the [[Roadmap]].

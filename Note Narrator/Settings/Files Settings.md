@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/settings/files
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.2
+updated: 2026-10-06
 ---
 
 # Files Settings
@@ -56,7 +56,7 @@ Everything except the first setting is **greyed out until saving is on**, and th
 
 | Setting | Default | Greyed out when | What it does |
 | --- | --- | --- | --- |
-| **Show "clear Note Narrator files" menu item and delete button** | Enabled | Saving or linking is off | Enables the panel menu item and the status-line delete button |
+| **Show "Clear Note Narrator files" menu item and delete button** | Enabled | Saving or linking is off | Enables the panel menu item and the status-line delete button |
 | **Auto-clean up properties when saved file is missing** | Enabled | Saving or linking is off | Removes stale properties if the linked file no longer exists |
 
 > [!danger] Auto-generate on open spends credits
