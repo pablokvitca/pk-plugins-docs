@@ -7,8 +7,8 @@ tags:
   - background
 publish: true
 permalink: note-narrator/using/background-generation
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Background Generation
@@ -18,10 +18,10 @@ If you want a note's audio ready for later without listening to it now, generate
 ## Generate a note in the background
 
 1. Open the note.
-2. Click **Generate in background** in the panel, or run the **Generate note audio in background** command.
+2. Click **Background** in the panel, or run the **Generate note audio in background** command.
 3. The note joins the panel's **background jobs** list. Nothing stops or starts playing.
 
-It always generates the whole note, even if you have text selected.
+It always generates the whole note, even if you have text selected. If you close the note's tab, the panel's button still works: it generates the note as saved in your vault.
 
 ## Move a read to the background
 
@@ -43,16 +43,16 @@ Click a job to play it from the start. Pressing **Read** on a note that has a jo
 
 ## What the button says
 
-The panel's background button follows the note you are viewing:
+The panel's background button follows the note you are viewing. Hover over it (or long-press on mobile) to see exactly what it will do:
 
-| Button | When |
-| --- | --- |
-| **Generate in background** | The note has no job and no up-to-date saved audio. Starts a new job |
-| **Regenerate in background** | The note's saved audio is up to date. Generates it again on purpose, like **Read** does |
-| **Move to background** | The note is being read and still has parts to generate |
-| **Generate in background** (disabled) | The note is already queued or generating, or is playing from its saved audio |
-| **Move to background** (disabled) | The note's read has finished generating, so there is nothing to move |
-| **Ready in background** (disabled) | The note finished generating in the background. Play it from its card, or clear it from the list to generate it again |
+| Button | Tooltip starts with | When |
+| --- | --- | --- |
+| **Background** | Generate in background | The note has no job and no up-to-date saved audio. Starts a new job |
+| **Background** | Regenerate in background | The note's saved audio is up to date. Generates it again on purpose, like **Read** does |
+| **Move to background** | | The note is being read and still has parts to generate |
+| **Background** (disabled) | | The note is already queued or generating, or is playing from its saved audio |
+| **Move to background** (disabled) | | The note's read has finished generating, so there is nothing to move |
+| **Ready in background** (disabled) | | The note finished generating in the background. Play it from its card, or clear it from the list to generate it again |
 
 The command makes the same decision and shows a notice when there is nothing to do.
 
@@ -62,6 +62,7 @@ The command makes the same decision and shows a notice when there is nothing to 
 ## When files are deleted
 
 - Deleting a note, or the audio file its finished job saved, removes its job from the list, so the note can be generated again.
+- Deleting a note while it is being read lets the read finish playing, but its audio is not saved and it is never moved to the background.
 - **Clear Note Narrator files** also clears a finished job from the list (the confirmation says so). A job that is still queued or generating is kept: its new audio is saved and linked when it finishes.
 
 ## Starting another note while one is still generating

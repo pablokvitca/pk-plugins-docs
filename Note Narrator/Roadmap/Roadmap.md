@@ -6,8 +6,8 @@ tags:
   - roadmap
 publish: true
 permalink: note-narrator/roadmap
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Roadmap
@@ -17,6 +17,7 @@ updated: 2026-10-05
 
 ## Recently shipped
 
+- **1.1.1: fixes.** The background button is now labelled just **Background** (hover for whether it generates or regenerates). The note title is read together with the start of the note instead of as a tiny first part followed by a pause. Read and **Background** work after you close the note's tab. Cancelling a read (or disabling the plugin) no longer saves its audio, deleting a note while it is being read no longer leaves an audio file or a background card behind, and **Auto-generate on open** no longer generates a note that is already being read or generated, and stops when you disable the plugin. Unit tests now run on every build.
 - **1.1.0: generate in background.** Generate a note's audio in the background without starting a read first, from the panel's **Generate in background** button or the new **Generate note audio in background** command. The button follows the note: **Move to background** while it is reading, **Regenerate in background** when its saved audio is up to date, and **Ready in background** once its job has finished. Finished jobs can be cleared from the list, and deleting a note or its saved audio removes its job. Also fixed: pausing while the current part is still generating now stays paused, and audio for a note edited while it was generating no longer shows as up to date. See [[Background Generation]]. Also in 1.1.0: when the note title exactly matches its first heading, the title is no longer read twice (see **Skip title when it repeats the first heading** on [[General Settings]]).
 - **Note Narrator is in Obsidian's community plugin directory.** Install it from **Settings → Community plugins → Browse** instead of BRAT. See [[Installation]].
 - **1.0.0.** No user-facing changes over 0.17.1. It hardens the release process: the built `main.js` and `styles.css` now carry a GitHub build-provenance attestation, so anyone can verify they came from this repository's own source; a CSS rule was adjusted to drop a browser-support warning; and a type-resolution dependency (`moment`) is now declared directly instead of arriving indirectly through Obsidian's own package.

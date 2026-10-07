@@ -7,8 +7,8 @@ tags:
   - profiles
 publish: true
 permalink: note-narrator/settings/profiles
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Profiles Settings
@@ -38,7 +38,9 @@ The **Default narrator** dropdown at the top of the tab picks the profile used f
 
 ![[settings-profile-page.png]]
 
-### Profile
+### Name and provider
+
+The settings at the top of the page, without a heading:
 
 | Setting | What it does |
 | --- | --- |

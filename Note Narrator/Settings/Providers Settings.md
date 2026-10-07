@@ -8,8 +8,8 @@ tags:
   - elevenlabs
 publish: true
 permalink: note-narrator/settings/providers
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Providers Settings
@@ -55,7 +55,7 @@ Rate limits belong to an account, not a voice, so parallel generation is set **p
 | --- | --- | --- | --- |
 | **Generate chunks in parallel** | Enabled | never | Generate more than one chunk ahead of playback at once |
 | **Max parallel chunk generation** | 2 | Parallel is off | Chunks generating at once (minimum 2). Recommended 2 to 5. Has a reset button |
-| **Max parallel background chunk generation** | 1 | never | The same limit for notes generating in the background, whether you used **Move to background** or **Generate in background**. Kept low so it does not compete with a read you are listening to. Recommended 1 to 3 |
+| **Max parallel background chunk generation** | 1 | never | The same limit for notes generating in the background, whether you used **Move to background** or the **Background** button. Kept low so it does not compete with a read you are listening to. Recommended 1 to 3 |
 
 > [!warning] Rate limits
 > If the service answers with a rate limit (HTTP 429), Note Narrator retries with backoff and falls back to one chunk at a time for the rest of that read. See [[Long Notes and Chunking]].

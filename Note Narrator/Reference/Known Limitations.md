@@ -7,8 +7,8 @@ tags:
   - limitations
 publish: true
 permalink: note-narrator/reference/known-limitations
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.1
+updated: 2026-10-06
 ---
 
 # Known Limitations
@@ -31,19 +31,14 @@ Things that do not work the way you might expect yet. Many have a planned fix on
 - **Multi-part files are concatenated bytes.** Chunks are joined without re-muxing the MP3 stream. This works with ElevenLabs output but is not strictly spec-correct MP3 concatenation.
 - **Part navigation can fall back.** During Play saved, if chunk-affecting settings changed since the audio was made, or the byte lengths do not add up, the file plays as a single non-navigable piece even though the note still says "up to date". Regenerate to fix it.
 - **Clear has no undo** for the properties. The file goes to trash per your vault setting.
-- **Cancel can still save.** If you cancel (or the plugin unloads) while the last part is still generating, that part can finish and the audio is saved and linked anyway.
 
 ## Background generation
 
-- **Out-of-date jobs are not flagged.** If you edit a note (or change its narrator) after its background job started, the job's card does not say so, and clicking it plays the old text. Pressing **Read** or **Generate in background** replaces it with a fresh job. **Move to background** on a read of an edited note moves the old read as it is.
-- **Deleting a note while it is being read** can leave a background card and an audio file behind. Clear the card from the list and delete the file by hand.
-- **Auto-generate on open** does not check the background list, so it can generate a note that is already generating in the background, spending credits twice.
-- **Read and Generate in background need the note open.** If you close the note's tab, the panel still shows it with both buttons enabled, but clicking them asks you to open a note. Open the note again first.
+- **Out-of-date jobs are not flagged.** If you edit a note (or change its narrator) after its background job started, the job's card does not say so, and clicking it plays the old text. Pressing **Read** or the **Background** button replaces it with a fresh job. **Move to background** on a read of an edited note moves the old read as it is.
 
 ## Playback and highlighting
 
 - No scrubbing to an arbitrary time, only relative rewind and skip.
-- **Quick start with the title on.** With **Read note title** and **Quick start** on, the first part can be just the title, followed by a pause while the next, full-size part generates.
 - Chunk and section highlight positions are proportional estimates and can be a word or two off at a boundary.
 - Highlighting needs Editing view. It cannot draw in Reading view.
 - Neither highlighting nor scroll-to-current applies to selection reads.
