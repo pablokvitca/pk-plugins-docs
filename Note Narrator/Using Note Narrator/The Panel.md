@@ -7,8 +7,8 @@ tags:
   - panel
 publish: true
 permalink: note-narrator/using/the-panel
-plugin-version: 1.1.2
-updated: 2026-10-06
+plugin-version: 1.1.4
+updated: 2026-10-08
 ---
 
 # The Panel
@@ -37,7 +37,7 @@ The panel lives in the right sidebar. Open it from the ribbon icon, the note too
 | Button | What it does |
 | --- | --- |
 | **Play saved** | Plays the note's existing saved audio with no regeneration. |
-| **Read** | Generates and plays the note. Relabels itself to **Regenerate** when the note changed since the audio was made, and to **Regenerate with new narrator** when the selected profile's voice settings differ from the saved audio's. While busy it reads "Reading". |
+| **Read** | Generates and plays the note. Relabels itself to **Regenerate** when the note changed since the audio was made, and to **Regenerate with new narrator** when the selected profile's voice settings differ from the saved audio's. While busy it reads "Reading", unless the note being read has been edited since the read started (or its outdated saved audio is playing): then it shows **Regenerate** and stays clickable. It also becomes clickable again as **Read** if the read's saved audio is deleted while it plays. |
 | **Cancel** | Stops an in-progress generation. |
 | **Background** | Generates the note in the background without playing it. When the saved audio is up to date it regenerates it instead (its tooltip says **Regenerate in background**). Reads **Move to background** while the note is reading (stops playback, keeps generating), and **Ready in background** once its background job has finished. Disabled when there is nothing to do. See [[Background Generation#What the button says]]. |
 

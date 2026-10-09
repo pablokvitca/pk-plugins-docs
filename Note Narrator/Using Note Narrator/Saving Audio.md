@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.1.2
-updated: 2026-10-06
+plugin-version: 1.1.4
+updated: 2026-10-08
 ---
 
 # Saving Audio
@@ -36,7 +36,7 @@ The hash lets the panel tell you whether the audio still matches the note:
 > The note has not changed since the audio was generated. **Play saved** is ready.
 
 > [!warning] Saved audio is outdated
-> The note has changed. **Read** becomes **Regenerate**. Play saved still plays the old audio.
+> The note has changed. **Read** becomes **Regenerate**, even while the outdated audio is playing. Play saved still plays the old audio.
 
 > [!warning] Saved audio was made with a different narrator
 > The note has not changed, but the selected narrator profile's voice settings differ from the ones the audio was made with. **Read** becomes **Regenerate with new narrator**. Play saved still plays the old audio.
@@ -60,6 +60,11 @@ The hash lets the panel tell you whether the audio still matches the note:
 - **Replace existing file** (default): overwrite in place. If the voice changed, the file keeps its original name with the old voice in brackets, only its contents change.
 - **Keep old versions**: make a new file each time.
 
+Only an `.mp3` counts as a note's saved audio. If the audio path property was edited to point at something else (another note, for example), Note Narrator never overwrites or trashes it: it saves a new file instead.
+
+> [!note] Copies of a note
+> A copy of a note (for example from **Make a copy**) keeps the original's properties, so both point at the same audio file. Regenerating or clearing either one leaves that shared file alone, with a notice: regenerating saves a new file, and clearing only removes the copy's properties.
+
 ## Auto-generate on open
 
 Opening a note silently regenerates and saves its audio if it is missing or outdated. It does not play and does not disturb anything already playing.
@@ -73,7 +78,7 @@ If you select **Read** or **Background** for the note while it is still generati
 
 **Clear Note Narrator files** (panel **⋮** menu, or the delete button on the status line) removes a note's audio file and its properties after a confirmation. The file goes to the trash according to your vault's deletion preference. The properties cannot be restored. If the note has a finished background job, it is cleared from the list too. One still generating is kept, and its new audio is saved when it finishes.
 
-If a linked file is deleted or moved outside Note Narrator, the plugin can quietly remove the stale properties so the note does not show a misleading "outdated" status. That is **Auto-clean up properties when saved file is missing** (enabled by default).
+If a linked file is deleted or moved outside Note Narrator, the plugin can quietly remove the stale properties so the note does not show a misleading "outdated" status. The same happens when the audio path property doesn't name an `.mp3` file. That is **Auto-clean up properties when saved file is missing** (enabled by default).
 
 ## Where does it go?
 
