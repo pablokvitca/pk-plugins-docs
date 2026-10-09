@@ -7,8 +7,8 @@ tags:
   - limitations
 publish: true
 permalink: note-narrator/reference/known-limitations
-plugin-version: 1.1.1
-updated: 2026-10-06
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Known Limitations
@@ -34,7 +34,7 @@ Things that do not work the way you might expect yet. Many have a planned fix on
 
 ## Background generation
 
-- **Out-of-date jobs are not flagged.** If you edit a note (or change its narrator) after its background job started, the job's card does not say so, and clicking it plays the old text. Pressing **Read** or the **Background** button replaces it with a fresh job. **Move to background** on a read of an edited note moves the old read as it is.
+- **Outdated jobs still play the old version.** A job whose note was edited (or whose narrator changed) after it was generated is marked **Outdated**, but playing it still plays the old text. Pressing **Read** or the **Background** button replaces it with a fresh job. **Move to background** on a read of an edited note moves the old read as it is.
 
 ## Playback and highlighting
 

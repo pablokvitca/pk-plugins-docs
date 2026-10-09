@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/settings/files
-plugin-version: 1.1.4
-updated: 2026-10-08
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Files Settings
@@ -34,6 +34,7 @@ Everything except the first setting is **greyed out until saving is on**, and th
 | **Save location** | Same folder as the note | Saving is off | Same folder, or a custom folder |
 | **Custom folder path** | `Note Narrator Audio` | Saving is off, or location is not Custom folder | Vault-relative folder, created if missing. Empty falls back to the default |
 | **On regenerate** | Replace existing file | Saving or linking is off | **Replace existing file** or **Keep old versions** |
+| **Protect audio shared with copied notes** | Enabled | never | Before replacing or trashing a note's audio, checks whether another note (a copy) links the same file, and leaves it alone if so. It reads other notes' audio path property from Obsidian's metadata cache, never their text. See [[Privacy and Network Use#Other notes it looks at]] |
 | **Auto-generate on open** | Disabled | Saving or linking is off | Silently regenerates missing or outdated audio when a note opens |
 
 ## Linking in the note
