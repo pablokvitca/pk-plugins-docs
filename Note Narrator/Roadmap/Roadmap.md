@@ -6,8 +6,8 @@ tags:
   - roadmap
 publish: true
 permalink: note-narrator/roadmap
-plugin-version: 1.1.4
-updated: 2026-10-08
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Roadmap
@@ -17,6 +17,7 @@ updated: 2026-10-08
 
 ## Recently shipped
 
+- **1.1.5: fixes and disclosure.** Background notes edited since they were generated, or made with another narrator, are marked **Outdated** on their card. A new **Protect audio shared with copied notes** setting (on by default) controls the check that keeps a copied note from overwriting or trashing the original's audio; it's the only time Note Narrator looks at other notes, and it's now described in [[Privacy and Network Use]]. Every dropdown marks its default option, ElevenLabs error messages are kept short, and a development-only dependency was updated for a security advisory.
 - **1.1.4: fixes.** Edit a note while it's being read, or play its outdated saved audio, and **Read** now offers **Regenerate** instead of staying a disabled "Reading". It also comes back as **Read** if you delete the saved audio while it plays. Only an `.mp3` counts as a note's saved audio, so an edited audio path property can no longer get another file overwritten or trashed, and a copy of a note no longer replaces or trashes the audio it shares with the original. Background notes whose audio is saved are freed from memory and play from the vault, and unsaved finished notes are capped by the new **Unsaved finished notes kept in memory** setting (see [[Performance Settings]]). Notes saved with Windows (CRLF) line endings no longer have their properties read aloud or their highlight drift, a property edited just before Read is spoken with its new value, and audio saved by **Auto-generate on open** with quick start on keeps its parts for Previous/Next instead of playing as one piece.
 - **1.1.3: fixes.** Deleting a note while its audio file is being written no longer leaves that file behind or shows a "Failed to save audio file" notice. If you disable the plugin or select **Read** at that moment instead, the finished audio is still saved and linked. Also more automated tests for the panel, the plugin's commands, and folders being moved or deleted.
 - **1.1.2: fixes.** Selecting **Read** or **Background** for a note that **Auto-generate on open** is still generating now takes over from it instead of generating the note a second time, and deleting the note stops it without leaving an audio file behind. After you switch narrator profile, the panel's status line says when a note's saved audio was made with a different narrator, and the toolbar icon only shows its check badge for audio that matches the selected narrator. The Files setting now quotes the **Clear Note Narrator files** menu item as it appears.

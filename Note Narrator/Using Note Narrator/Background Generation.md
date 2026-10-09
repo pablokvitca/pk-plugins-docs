@@ -7,8 +7,8 @@ tags:
   - background
 publish: true
 permalink: note-narrator/using/background-generation
-plugin-version: 1.1.4
-updated: 2026-10-08
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Background Generation
@@ -38,6 +38,8 @@ Each job shows as queued, generating or finished:
 - **Finished** jobs are ready to play. You get a notice when one finishes, and the audio is saved and linked if saving is on (see [[Saving Audio]]).
 
 Once a finished job's audio is saved to the vault, it is freed from memory, and clicking its card plays the saved file, the same as **Play saved**. Finished jobs that are *not* saved (saving is off, or the save failed) stay in memory. Up to **Unsaved finished notes kept in memory** of them are kept (5 by default, Performance tab): finishing one more clears the oldest from the list, with a notice. Playing a cleared note means generating it again.
+
+A job whose note was edited after it was generated, or that was made with a different narrator than the one now selected, shows an **Outdated** badge. Hover it to see which. Playing it still plays the older version; open the note and select **Read** (or **Background**) to generate it again, which replaces the job.
 
 Click a job to play it from the start. Pressing **Read** on a note that has a job does the same. The small button on a job either discards it (trash can, for a queued or generating job, throwing away its progress) or clears it with **Clear from list** (X, for a finished job).
 

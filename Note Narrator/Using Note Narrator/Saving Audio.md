@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.1.4
-updated: 2026-10-08
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Saving Audio
@@ -64,6 +64,7 @@ Only an `.mp3` counts as a note's saved audio. If the audio path property was ed
 
 > [!note] Copies of a note
 > A copy of a note (for example from **Make a copy**) keeps the original's properties, so both point at the same audio file. Regenerating or clearing either one leaves that shared file alone, with a notice: regenerating saves a new file, and clearing only removes the copy's properties.
+> This is **Protect audio shared with copied notes** (Files tab, on by default). Turned off, Note Narrator skips the check, and regenerating or clearing a copy acts on the shared file.
 
 ## Auto-generate on open
 

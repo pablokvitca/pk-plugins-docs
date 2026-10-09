@@ -7,8 +7,8 @@ tags:
   - privacy
 publish: true
 permalink: note-narrator/reference/privacy
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.5
+updated: 2026-10-09
 ---
 
 # Privacy and Network Use
@@ -24,6 +24,7 @@ Note Narrator does not collect telemetry or analytics, and it never runs remote 
 | --- | --- |
 | Generate speech | The text being read (after Markdown cleanup), the narrator profile's voice, model and voice settings, and the provider's API key |
 | List voices | The provider's API key, to fetch that account's voices (when you open a profile's page or press refresh) |
+| Name a saved audio file | The provider's API key and the voice ID, to label the file with the voice's name (each time audio is saved) |
 
 The text of a note leaves your device when you read it. If a note is sensitive, do not read it with this plugin. ElevenLabs' own terms and privacy policy apply to what they receive.
 
@@ -34,6 +35,16 @@ The text of a note leaves your device when you read it. If a note is sensitive, 
 - **Audio and tracking data:** `.mp3` files in your vault and frontmatter properties on notes. See [[Frontmatter Properties]].
 
 Nothing is sent to the plugin author.
+
+## Other notes it looks at
+
+Note Narrator reads only the note you're reading, with one exception. Before it replaces or trashes a note's saved audio, it checks whether another note links the same audio file, so a copied note (which keeps the original's properties) doesn't overwrite or trash audio the original still uses.
+
+- **What it reads:** each note's Note Narrator audio path property, from Obsidian's metadata cache. It never reads the notes' text.
+- **When:** only when it saves audio in **Replace existing file** mode for a note that already has audio, and when you clear a note's audio.
+- **Where it goes:** nowhere. Nothing it sees leaves your device.
+
+The check lists every note in your vault, which is why Obsidian's plugin scanner reports "vault enumeration". It's on by default. Turn it off with **Protect audio shared with copied notes** in [[Files Settings]]. With it off, regenerating or clearing a copied note can overwrite or trash the original's audio.
 
 > [!tip] Keep audio out of sync targets
 > If your vault syncs, saved `.mp3` files sync with it and can be large. Choose a folder you can exclude from sync under **Save location**. Saving outside the vault is planned. See [[Roadmap]].
