@@ -8,8 +8,8 @@ tags:
   - elevenlabs
 publish: true
 permalink: note-narrator/settings/providers
-plugin-version: 1.1.1
-updated: 2026-10-06
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Providers Settings
@@ -20,7 +20,7 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 
 ## The provider list
 
-- **+** adds a provider, and also adds a narrator profile for it named **Default (provider name)**, so a new provider is usable straight away. On mobile it is an "Add provider" row below the list.
+- **+** lists the provider types: ElevenLabs, OpenAI, Google Gemini and Amazon Polly. Choosing one adds a provider of that type, and also a narrator profile for it named **Default (provider name)**, so a new provider is usable straight away. Nothing is added until you choose. On mobile it is an "Add provider" row below the list.
 - Select a provider to open its page.
 - Drag the handle to reorder.
 - To remove a provider, open it and press **Delete provider** at the bottom of its page. You can also select a row in the list and press the Delete key.
@@ -41,8 +41,8 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 | Setting | What it does |
 | --- | --- |
 | **Name** | How the provider is listed here and when a profile picks a provider |
-| **Type** | Which service it connects to. Only ElevenLabs is available today |
-| **API key** | Chosen from Obsidian's secret storage, not saved in the plugin's settings file |
+| **Type** | Which service it connects to. Changing it replaces the credential rows, and resets the voice settings of the profiles that use it |
+| **API key** | Chosen from Obsidian's secret storage, not saved in the plugin's settings file. Amazon Polly has **Access key ID**, **Secret access key** and **Region** instead. The link below it opens the setup guide for that provider |
 
 > [!info] Where the key lives
 > The key is stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage). Only the **name** of the secret is saved (`elevenlabs-api-key` by default), so the key never appears in your vault or synced settings, and other plugins can share the same secret.
@@ -70,4 +70,4 @@ The model is part of a narrator profile, not the provider. See [[Profiles Settin
 | Eleven Multilingual v2 | 10,000 |
 | Eleven Flash v2.5 | 40,000 |
 
-See [[Setting Up ElevenLabs]] for creating a key.
+Each provider type has a setup guide for creating a key with only the permissions it needs, a spending limit and an expiration date: [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
