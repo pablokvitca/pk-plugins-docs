@@ -74,3 +74,25 @@ Each part of a note is at most 3,000 characters. If Polly throttles a request, N
 
 > [!info] What is sent
 > The text being read and the engine and voice go to AWS (`polly.<region>.amazonaws.com`), signed with your keys, under the AWS Customer Agreement. See [[Privacy and Network Use]].
+
+## Official links
+
+AWS's own pages, for anything this guide doesn't cover or that has changed since.
+
+**Documentation**
+- [SynthesizeSpeech](https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html): what Note Narrator calls to generate audio
+- [Voices](https://docs.aws.amazon.com/polly/latest/dg/available-voices.html) and [engines](https://docs.aws.amazon.com/polly/latest/dg/voice-engines-polly.html)
+- [Quotas](https://docs.aws.amazon.com/polly/latest/dg/limits.html): request size and rate limits
+- [IAM policies for Polly](https://docs.aws.amazon.com/polly/latest/dg/security_iam_id-based-policy-examples.html), [creating an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) and [managing access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
+- [Allowing access only until a date](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_aws-dates.html): the `aws:CurrentTime` condition
+- [Creating a budget](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-create.html) and [budget actions](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)
+
+**Terms and policies**
+- [AWS Customer Agreement](https://aws.amazon.com/agreement/) and [Service Terms](https://aws.amazon.com/service-terms/)
+- [Privacy Notice](https://aws.amazon.com/privacy/)
+- [Acceptable Use Policy](https://aws.amazon.com/aup/)
+
+**Pricing and billing**
+- [Amazon Polly pricing](https://aws.amazon.com/polly/pricing/): what each engine costs per character, and the free tier
+- [AWS Pricing Calculator](https://calculator.aws/): estimate a month of reading
+- [Billing and Cost Management](https://console.aws.amazon.com/billing/home): what you have spent so far, and your budgets

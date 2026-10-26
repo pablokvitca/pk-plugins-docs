@@ -63,3 +63,24 @@ Each part of a note is at most 4,096 characters. If OpenAI rate-limits a request
 
 > [!info] What is sent
 > The text being read, the voice and model settings, and your key go to OpenAI (`api.openai.com`), under OpenAI's terms and privacy policy. See [[Privacy and Network Use]].
+
+## Official links
+
+OpenAI's own pages, for anything this guide doesn't cover or that has changed since.
+
+**Documentation**
+- [Text to speech guide](https://developers.openai.com/api/docs/guides/text-to-speech): models, voices and instructions
+- [Create speech API](https://developers.openai.com/api/reference/resources/audio/subresources/speech/methods/create): what Note Narrator calls to generate audio
+- [Production best practices](https://developers.openai.com/api/docs/guides/production-best-practices): key expiration, spend alerts and hard spend limits
+- [Managing projects](https://help.openai.com/en/articles/9186755-managing-projects-in-the-api-platform) and [API key permissions](https://help.openai.com/en/articles/8867743-assign-api-key-permissions)
+- [Rate limits](https://developers.openai.com/api/docs/guides/rate-limits)
+
+**Terms and policies**
+- [Services Agreement](https://openai.com/policies/services-agreement) (applies to the API) and [Terms of Use](https://openai.com/policies/terms-of-use)
+- [Privacy Policy](https://openai.com/policies/privacy-policy)
+- [Usage Policies](https://openai.com/policies/usage-policies)
+
+**Pricing and billing**
+- [API pricing](https://openai.com/api/pricing) and the [pricing reference](https://developers.openai.com/api/docs/pricing): what text to speech costs per model
+- [Billing](https://platform.openai.com/settings/organization/billing/overview): payment method and credit balance
+- [Usage](https://platform.openai.com/usage): what you have spent so far, per project

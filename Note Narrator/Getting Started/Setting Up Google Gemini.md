@@ -59,3 +59,23 @@ Each part of a note is at most 5,000 characters. Gemini's audio is saved as a `.
 
 > [!info] What is sent
 > The text being read, the voice and model settings, and your key go to Google (`generativelanguage.googleapis.com`), under the Gemini API terms. See [[Privacy and Network Use]].
+
+## Official links
+
+Google's own pages, for anything this guide doesn't cover or that has changed since.
+
+**Documentation**
+- [Speech generation](https://ai.google.dev/gemini-api/docs/speech-generation): the text to speech models, voices and prompts Note Narrator uses
+- [API keys](https://ai.google.dev/gemini-api/docs/api-key): creating and restricting keys
+- [Billing](https://ai.google.dev/gemini-api/docs/billing): tiers, the billing account cap and project spend caps
+- [Rate limits](https://ai.google.dev/gemini-api/docs/rate-limits)
+
+**Terms and policies**
+- [Gemini API Additional Terms of Service](https://ai.google.dev/gemini-api/terms): including how free-tier data is used
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy)
+
+**Pricing and billing**
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing): what the text to speech models cost, and what the free tier includes
+- [Spend](https://aistudio.google.com/spend): your project's spend and its monthly spend cap
+- [Usage](https://aistudio.google.com/usage): requests and limits so far

@@ -69,3 +69,24 @@ The character limit is the size of one request. Longer notes are split into seve
 ## Rate limits
 
 If ElevenLabs answers with a rate limit (HTTP 429), Note Narrator retries automatically with exponential backoff (up to 8 retries, with the wait capped at 30 seconds) and switches to one chunk at a time for the rest of that read. Parallelism is set per provider. See [[Providers Settings]].
+
+## Official links
+
+ElevenLabs' own pages, for anything this guide doesn't cover or that has changed since.
+
+**Documentation**
+- [API keys](https://elevenlabs.io/docs/overview/administration/workspaces/api-keys): creating, restricting, expiring and rotating keys
+- [Authentication](https://elevenlabs.io/docs/api-reference/authentication)
+- [Text to speech API](https://elevenlabs.io/docs/api-reference/text-to-speech/convert): what Note Narrator calls to generate audio
+- [Voices API](https://elevenlabs.io/docs/api-reference/voices/search): what the voice list comes from
+- [Models](https://elevenlabs.io/docs/models)
+
+**Terms and policies**
+- [Terms of Service](https://elevenlabs.io/terms-of-use)
+- [Privacy Policy](https://elevenlabs.io/privacy-policy)
+- [Prohibited Use Policy](https://elevenlabs.io/use-policy)
+
+**Pricing and billing**
+- [Plans and pricing](https://elevenlabs.io/pricing) and [API pricing](https://elevenlabs.io/pricing/api): what audio costs in credits
+- [Your subscription](https://elevenlabs.io/app/subscription): plan, credits left and usage-based billing
+- [Usage](https://elevenlabs.io/app/usage): what you have used so far
