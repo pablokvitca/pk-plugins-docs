@@ -6,8 +6,8 @@ tags:
   - getting-started
 publish: true
 permalink: note-narrator/getting-started/quick-start
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Quick Start

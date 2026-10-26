@@ -6,8 +6,8 @@ tags:
   - roadmap
 publish: true
 permalink: note-narrator/roadmap
-plugin-version: 1.1.5
-updated: 2026-10-09
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Roadmap
@@ -17,6 +17,7 @@ updated: 2026-10-09
 
 ## Recently shipped
 
+- **1.1.6: fixes and centered panel text.** The note title is never read on its own as the first part anymore, so playback no longer pauses after it. Before, that happened when only a comment or a `---` line came before the first heading, when the first section was skipped, or when quick start's first part had room for nothing but the title. With **Read note properties** off, editing a property no longer marks saved audio or background notes as outdated, since properties are not heard. A new **Center panel text** setting (on by default) centers the panel's note stats, progress line and time readout. See [[Appearance Settings]].
 - **1.1.5: fixes and disclosure.** Background notes edited since they were generated, or made with another narrator, are marked **Outdated** on their card. A new **Protect audio shared with copied notes** setting (on by default) controls the check that keeps a copied note from overwriting or trashing the original's audio; it's the only time Note Narrator looks at other notes, and it's now described in [[Privacy and Network Use]]. Every dropdown marks its default option, ElevenLabs error messages are kept short, and a development-only dependency was updated for a security advisory.
 - **1.1.4: fixes.** Edit a note while it's being read, or play its outdated saved audio, and **Read** now offers **Regenerate** instead of staying a disabled "Reading". It also comes back as **Read** if you delete the saved audio while it plays. Only an `.mp3` counts as a note's saved audio, so an edited audio path property can no longer get another file overwritten or trashed, and a copy of a note no longer replaces or trashes the audio it shares with the original. Background notes whose audio is saved are freed from memory and play from the vault, and unsaved finished notes are capped by the new **Unsaved finished notes kept in memory** setting (see [[Performance Settings]]). Notes saved with Windows (CRLF) line endings no longer have their properties read aloud or their highlight drift, a property edited just before Read is spoken with its new value, and audio saved by **Auto-generate on open** with quick start on keeps its parts for Previous/Next instead of playing as one piece.
 - **1.1.3: fixes.** Deleting a note while its audio file is being written no longer leaves that file behind or shows a "Failed to save audio file" notice. If you disable the plugin or select **Read** at that moment instead, the finished audio is still saved and linked. Also more automated tests for the panel, the plugin's commands, and folders being moved or deleted.

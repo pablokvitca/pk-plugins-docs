@@ -7,8 +7,8 @@ tags:
   - panel
 publish: true
 permalink: note-narrator/using/the-panel
-plugin-version: 1.1.4
-updated: 2026-10-08
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # The Panel
@@ -28,6 +28,8 @@ The panel lives in the right sidebar. Open it from the ribbon icon, the note too
 7. **Playback controls.** See [[Playback Controls]].
 8. **Speed and volume.** Live sliders, each can be hidden in settings. See [[Appearance Settings]].
 9. **Background jobs.** Notes queued, generating or finished in the background. Click one to play it. See [[Background Generation]].
+
+The note stats, the "Part X of Y" line and the time readout are centered. Turn off **Center panel text** in [[Appearance Settings]] to align them left.
 
 > [!note] Disabled, not hidden
 > Buttons that do not apply right now (for example Previous part on a single-chunk read, or Play saved when there is no saved audio) are shown disabled rather than removed, so the layout does not jump around.

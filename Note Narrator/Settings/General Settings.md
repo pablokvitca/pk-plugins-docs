@@ -7,8 +7,8 @@ tags:
   - reading
 publish: true
 permalink: note-narrator/settings/general
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # General Settings
@@ -28,7 +28,7 @@ With **Skip Markdown comments** off, the two comment options below it are greyed
 | **Read selection instead of whole note** | Enabled | never | With a text selection active, reads only the selection |
 | **Read note title** | Enabled | never | Speaks the note's title before its content |
 | **Skip title when it repeats the first heading** | Enabled | never | With Read note title on, skips the title anyway when it exactly matches the note's first heading (any level), so it is not spoken twice. The heading is still read as part of the body |
-| **Read note properties** | Disabled | never | Speaks "properties", each key and value, then "content", before the body. Not used for a selection |
+| **Read note properties** | Disabled | never | Speaks "properties", each key and value, then "content", before the body. Not used for a selection. Also decides whether editing a property marks saved audio outdated (see [[Saving Audio#Linking and staleness]]) |
 | **Skip Markdown comments** | Enabled | never | Strips Obsidian comments (`%% like this %%`) before reading |
 | **Don't read comment delimiter symbols** | Enabled | Skip Markdown comments is on | Never reads the raw `%%` markup aloud, only the text between |
 | **Announce comments as "Comment: ..."** | Enabled | Skip Markdown comments is on | Prefixes a comment's text with "Comment:" |

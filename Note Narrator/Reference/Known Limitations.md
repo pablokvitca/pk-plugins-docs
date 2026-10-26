@@ -7,8 +7,8 @@ tags:
   - limitations
 publish: true
 permalink: note-narrator/reference/known-limitations
-plugin-version: 1.1.5
-updated: 2026-10-09
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Known Limitations
@@ -26,7 +26,7 @@ Things that do not work the way you might expect yet. Many have a planned fix on
 
 ## Saved audio
 
-- **Staleness is whole-note.** The hash covers the full note, so editing anything, even outside what was read (for example after reading a selection), marks the audio outdated.
+- **Staleness is whole-note.** The hash covers the note's full text, so editing anything, even outside what was read (for example after reading a selection), marks the audio outdated. Properties only count with **Read note properties** on, except for audio saved before 1.1.6, which counts them until it's regenerated.
 - **Replace keeps the old filename.** With "Replace existing file", a narrator change keeps the original filename (with the old voice name in brackets) and only replaces the contents.
 - **Multi-part files are concatenated bytes.** Chunks are joined without re-muxing the MP3 stream. This works with ElevenLabs output but is not strictly spec-correct MP3 concatenation.
 - **Part navigation can fall back.** During Play saved, if chunk-affecting settings changed since the audio was made, or the byte lengths do not add up, the file plays as a single non-navigable piece even though the note still says "up to date". Regenerate to fix it.
