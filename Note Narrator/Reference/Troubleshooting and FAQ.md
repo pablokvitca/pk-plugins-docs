@@ -7,8 +7,8 @@ tags:
   - faq
 publish: true
 permalink: note-narrator/reference/troubleshooting
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Troubleshooting and FAQ
@@ -43,7 +43,7 @@ Highlighting needs the note open in **Editing view**, and **Highlight while read
 
 ## It says "Saved audio is outdated" but I only changed a little
 
-Any change to the note, anywhere, marks audio outdated. Exclude noisy properties with **Extra properties to exclude from staleness hashing**. See [[Saving Audio]].
+Any change to the note's text, anywhere, marks audio outdated. Property edits only count with **Read note properties** on (or for audio saved before 1.1.6, until it's regenerated). With it on, exclude noisy properties with **Extra properties to exclude from staleness hashing**. See [[Saving Audio]].
 
 ## Previous and Next part do not work during Play saved
 

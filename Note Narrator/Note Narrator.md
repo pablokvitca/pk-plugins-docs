@@ -8,8 +8,8 @@ aliases:
   - Note Narrator docs
 publish: true
 permalink: note-narrator
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Note Narrator

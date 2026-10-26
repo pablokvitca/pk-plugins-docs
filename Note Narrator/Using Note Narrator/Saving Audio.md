@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.1.5
-updated: 2026-10-09
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Saving Audio
@@ -41,8 +41,11 @@ The hash lets the panel tell you whether the audio still matches the note:
 > [!warning] Saved audio was made with a different narrator
 > The note has not changed, but the selected narrator profile's voice settings differ from the ones the audio was made with. **Read** becomes **Regenerate with new narrator**. Play saved still plays the old audio.
 
-> [!note] Everything counts
-> The hash covers the note's full content, even if you only read a selection, so any edit marks the audio outdated. Note Narrator's own properties are always excluded. Add other properties (for example a last-modified timestamp another plugin updates) to **Extra properties to exclude from staleness hashing**.
+> [!note] What counts as a change
+> The hash covers the note's full text, even if you only read a selection, so any edit to it marks the audio outdated. Properties only count when **Read note properties** is on (for the selected narrator profile), since otherwise they are never heard. Note Narrator's own properties are always excluded. With Read note properties on, add other properties (for example a last-modified timestamp another plugin updates) to **Extra properties to exclude from staleness hashing**.
+
+> [!info] Audio saved before 1.1.6
+> Audio saved by 1.1.0 to 1.1.5 is still checked the way it was saved, so a property edit still marks it outdated even with Read note properties off. Once it's regenerated, property edits stop counting.
 
 ![[panel-saved-status.png]]
 
@@ -51,7 +54,7 @@ The hash lets the panel tell you whether the audio still matches the note:
 **Play saved** plays the file immediately with no generation. Previous/Next part, highlighting and scroll-to-current also work because the saved chunk durations let the file be sliced back into parts.
 
 > [!caution] Only while up to date
-> Part navigation and highlighting during Play saved need the note to be up to date, and the chunk count to still match. If reading or chunking settings changed since the audio was made (chunker style, heading depth, skip patterns, quick start, model), the file plays as one piece. Regenerate to fix it.
+> Part navigation and highlighting during Play saved need the note to be up to date, and the chunk count to still match. If reading or chunking settings changed since the audio was made (chunker style, heading depth, skip patterns, quick start, model), the file plays as one piece. The same happens when an update changes how a note is split: since 1.1.6, a note with only a comment or a `---` line before its first heading reads its title with the first section. Regenerate to fix it.
 
 ## Regenerating
 

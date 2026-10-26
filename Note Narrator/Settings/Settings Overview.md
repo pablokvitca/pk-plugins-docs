@@ -6,8 +6,8 @@ tags:
   - settings
 publish: true
 permalink: note-narrator/settings/overview
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Settings Overview
@@ -49,6 +49,7 @@ Open **Settings, Note Narrator**. A tab bar at the top switches between six sect
 | Text chunker / Max heading depth | Markdown-aware / 2 |
 | Default playback speed | 1x |
 | Compact buttons | Disabled |
+| Center panel text | Enabled |
 | Show volume / speed slider | Enabled / Enabled |
 | Time display | Current part |
 | Background job display | Minimal card |

@@ -8,8 +8,8 @@ tags:
   - highlighting
 publish: true
 permalink: note-narrator/settings/appearance
-plugin-version: 1.1.0
-updated: 2026-10-05
+plugin-version: 1.1.6
+updated: 2026-10-26
 ---
 
 # Appearance Settings
@@ -23,6 +23,7 @@ The **Appearance** tab has two groups: **Panel** and **Highlighting**.
 | Setting | Default | What it does |
 | --- | --- | --- |
 | **Compact buttons** | Disabled | Play saved, Read, Cancel and the background button become icon-only with tooltips, at every panel size |
+| **Center panel text** | Enabled | Centers the note stats, the "Part X of Y, Z% complete" line and the time readout. Turn it off to align them left |
 | **Show volume slider in panel** | Enabled | Shows the volume slider and mute button |
 | **Show playback speed slider in panel** | Enabled | Shows the speed slider |
 | **Time display** | Show current part times | **Show full times**, **Show current part times**, or **Show full times + current part times** (full totals with the current part in parentheses). Ungenerated parts show as "+N parts" |
