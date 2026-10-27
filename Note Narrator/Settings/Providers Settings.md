@@ -9,7 +9,7 @@ tags:
 publish: true
 permalink: note-narrator/settings/providers
 plugin-version: 1.2.0
-updated: 2026-10-26
+updated: 2026-10-27
 ---
 
 # Providers Settings
@@ -36,7 +36,9 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 
 ![[settings-provider-openai.png]]
 
-### Connection
+### Name, type and credentials
+
+At the top of the page, without a heading:
 
 | Setting | What it does |
 | --- | --- |
