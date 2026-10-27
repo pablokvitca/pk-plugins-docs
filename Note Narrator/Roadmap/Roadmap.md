@@ -6,7 +6,7 @@ tags:
   - roadmap
 publish: true
 permalink: note-narrator/roadmap
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -14,6 +14,10 @@ updated: 2026-10-26
 
 > [!warning] Not a promise
 > This is direction, not a schedule. Ideas move between milestones, get reshaped, or get dropped. Version numbers show intended order, not dates.
+
+## In beta
+
+- **1.2.0: more providers.** Read with **OpenAI**, **Google Gemini** or **Amazon Polly** as well as ElevenLabs. The **+** button under **Providers** now lists the provider types and adds one only once you choose. Each provider has its own key settings (Amazon Polly takes AWS access keys and a region), voice settings in its narrator profiles, and a link to a guide for creating a key with only the permissions it needs, a spending limit and an expiration date. Google Gemini's audio is saved as `.wav` and still plays back part by part. Also fixed: a renamed provider or profile now shows its new name in the settings lists right away. Test it with BRAT's beta versions. See [[Providers Settings]] and [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
 
 ## Recently shipped
 
@@ -44,8 +48,7 @@ updated: 2026-10-26
 
 | Item | Why |
 | --- | --- |
-| **ElevenLabs credit usage and cost estimates** | Show remaining credits and an estimate before you read a long note |
-| **Other TTS providers** | Providers already have a type and per-type settings, so this means implementing more types than ElevenLabs. Google Gemini is next. See [[Supported Platforms]] |
+| **Credit usage and cost estimates** | Show remaining credits (ElevenLabs) or spend, and an estimate before you read a long note, for each provider |
 | **Local or offline voices** | Apple OS (Local) first: the text to speech built into macOS, iOS, iPadOS and visionOS. No key, no network, lower expressiveness. A local model may follow |
 | **Auto-caption images** | Use a vision model to give images a short spoken description instead of skipping them |
 
@@ -59,7 +62,7 @@ updated: 2026-10-26
 | **"Do not read aloud" delimiters** | A start and end marker, for example `---(start do not read aloud)---`, to exclude any region regardless of chunker |
 | **Hide Note Narrator properties** | A toggle to hide its frontmatter from the rendered Properties view (feasibility is being investigated) |
 | **Read out backlinks** | An option to speak the notes that link to this one. Disabled by default |
-| **Better per-chunk saving** | Proper MP3 re-muxing, or saving chunks separately with a manifest |
+| **Better per-chunk saving** | Proper MP3 re-muxing, or saving chunks separately with a manifest. WAV (Google Gemini) is already joined properly since 1.2.0 |
 
 ### 2.0
 

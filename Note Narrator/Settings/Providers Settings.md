@@ -1,6 +1,6 @@
 ---
 title: Providers Settings
-description: Add and configure text to speech providers, including several of the same type, with their own API keys and parallel generation limits.
+description: Add and configure text to speech providers (ElevenLabs, OpenAI, Google Gemini and Amazon Polly), including several of the same type, with their own keys and parallel generation limits.
 tags:
   - note-narrator
   - settings
@@ -16,7 +16,7 @@ updated: 2026-10-26
 
 A **provider** is a named connection to a text to speech service: its **type**, its **credentials**, and how many chunks may generate at once. Narrator profiles choose which provider they use. See [[Profiles Settings]].
 
-![[settings-providers-list.png]]
+![[settings-add-provider-menu.png]]
 
 ## The provider list
 
@@ -24,7 +24,7 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 - Select a provider to open its page.
 - Drag the handle to reorder.
 - To remove a provider, open it and press **Delete provider** at the bottom of its page. You can also select a row in the list and press the Delete key.
-- A provider with **no API key** shows a warning marker.
+- A provider with **no key** shows a warning marker, and "(no API key set)" ("(no access keys set)" for Amazon Polly) after its type.
 
 > [!info] Several providers of the same type
 > You can add more than one provider of the same type. For example, two ElevenLabs providers for a personal and a work account, each with its own API key and its own rate limits. Narrator profiles then pick whichever account they should use.
@@ -34,7 +34,7 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 
 ## A provider's page
 
-![[settings-provider-page.png]]
+![[settings-provider-openai.png]]
 
 ### Connection
 
@@ -44,8 +44,19 @@ A **provider** is a named connection to a text to speech service: its **type**, 
 | **Type** | Which service it connects to. Changing it replaces the credential rows, and resets the voice settings of the profiles that use it |
 | **API key** | Chosen from Obsidian's secret storage, not saved in the plugin's settings file. Amazon Polly has **Access key ID**, **Secret access key** and **Region** instead. The link below it opens the setup guide for that provider |
 
-> [!info] Where the key lives
-> The key is stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage). Only the **name** of the secret is saved (`elevenlabs-api-key` by default), so the key never appears in your vault or synced settings, and other plugins can share the same secret.
+Each type's credentials, and the secret names they start with:
+
+| Type | Credentials | Default secret names |
+| --- | --- | --- |
+| ElevenLabs | **API key** | `elevenlabs-api-key` |
+| OpenAI | **API key** | `openai-api-key` |
+| Google Gemini | **API key** | `gemini-api-key` |
+| Amazon Polly | **Access key ID**, **Secret access key**, and **Region** (default US East, N. Virginia) | `aws-access-key-id`, `aws-secret-access-key` |
+
+![[settings-provider-amazon-polly.png]]
+
+> [!info] Where the keys live
+> Keys are stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage). Only the **name** of each secret is saved, so keys never appear in your vault or synced settings, and other plugins can share the same secret. The Amazon Polly region isn't secret, so it's saved in the plugin's settings.
 
 ### Generation
 
@@ -58,16 +69,19 @@ Rate limits belong to an account, not a voice, so parallel generation is set **p
 | **Max parallel background chunk generation** | 1 | never | The same limit for notes generating in the background, whether you used **Move to background** or the **Background** button. Kept low so it does not compete with a read you are listening to. Recommended 1 to 3 |
 
 > [!warning] Rate limits
-> If the service answers with a rate limit (HTTP 429), Note Narrator retries with backoff and falls back to one chunk at a time for the rest of that read. See [[Long Notes and Chunking]].
+> If the service answers with a rate limit, Note Narrator retries with backoff and falls back to one chunk at a time for the rest of that read. See [[Long Notes and Chunking]].
 
-## ElevenLabs models
+## Character limits
 
-The model is part of a narrator profile, not the provider. See [[Profiles Settings]].
+Each request holds at most this much text, so longer notes are split into more parts. The model or engine is part of a narrator profile, not the provider. See [[Profiles Settings]].
 
-| Model | Character limit per request |
+| Provider | Character limit per request |
 | --- | --- |
-| Eleven v3 (research preview) | 5,000 |
-| Eleven Multilingual v2 | 10,000 |
-| Eleven Flash v2.5 | 40,000 |
+| ElevenLabs: Eleven v3 (research preview) | 5,000 |
+| ElevenLabs: Eleven Multilingual v2 | 10,000 |
+| ElevenLabs: Eleven Flash v2.5 | 40,000 |
+| OpenAI (every model) | 4,096 |
+| Google Gemini (both models) | 5,000 |
+| Amazon Polly (every engine) | 3,000 |
 
 Each provider type has a setup guide for creating a key with only the permissions it needs, a spending limit and an expiration date: [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].

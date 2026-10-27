@@ -18,7 +18,7 @@ Documentation for my Obsidian plugins. Each plugin has its own section.
 
 | Plugin | What it does | Docs |
 | --- | --- | --- |
-| **Note Narrator** | Reads your notes aloud with text to speech (ElevenLabs today, more providers planned) | [[Note Narrator\|Documentation home]] |
+| **Note Narrator** | Reads your notes aloud with text to speech (ElevenLabs, OpenAI, Google Gemini or Amazon Polly) | [[Note Narrator\|Documentation home]] |
 
 > [!note] Independent projects
 > These plugins are independent projects. They are not affiliated with, endorsed by, or sponsored by Obsidian or by any service they connect to. Product names are trademarks of their respective owners and are used here only to describe what the plugins work with.

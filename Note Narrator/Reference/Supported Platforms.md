@@ -7,8 +7,8 @@ tags:
   - platforms
 publish: true
 permalink: note-narrator/reference/supported-platforms
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Supported Platforms
@@ -33,19 +33,19 @@ Two things vary by platform: whether Note Narrator has been tried there, and whi
 
 ## Platforms
 
-| Platform | Testing | ElevenLabs | Google Gemini | Apple OS (Local) |
-| --- | --- | --- | --- | --- |
-| macOS | ✅ Tested | ✅ Supported | 🔜 Upcoming | 🔜 Upcoming |
-| iPhone (iOS) | ✅ Tested | ✅ Supported | 🔜 Upcoming | 🔜 Upcoming |
-| iPad (iPadOS) | ✅ Tested | ✅ Supported | 🔜 Upcoming | 🔜 Upcoming |
-| iPad mini (iPadOS) | ✅ Tested | ✅ Supported | 🔜 Upcoming | 🔜 Upcoming |
-| Apple Vision Pro (visionOS) | ✅ Tested | ✅ Supported | 🔜 Upcoming | 🔜 Upcoming |
-| Windows | ❔ Not tested | ✅ Supported | 🔜 Upcoming | ➖ Not applicable |
-| Linux | ❔ Not tested | ✅ Supported | 🔜 Upcoming | ➖ Not applicable |
-| Android phone and tablet | ❔ Not tested | ✅ Supported | 🔜 Upcoming | ➖ Not applicable |
+| Platform | Testing | ElevenLabs | OpenAI | Google Gemini | Amazon Polly | Apple OS (Local) |
+| --- | --- | --- | --- | --- | --- | --- |
+| macOS | ✅ Tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | 🔜 Upcoming |
+| iPhone (iOS) | ✅ Tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | 🔜 Upcoming |
+| iPad (iPadOS) | ✅ Tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | 🔜 Upcoming |
+| iPad mini (iPadOS) | ✅ Tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | 🔜 Upcoming |
+| Apple Vision Pro (visionOS) | ✅ Tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | 🔜 Upcoming |
+| Windows | ❔ Not tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | ➖ Not applicable |
+| Linux | ❔ Not tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | ➖ Not applicable |
+| Android phone and tablet | ❔ Not tested | ✅ Supported | ✅ Supported | ✅ Supported | ✅ Supported | ➖ Not applicable |
 
-- **ElevenLabs** is the only provider in the current version. It needs an internet connection and an ElevenLabs account. See [[Setting Up ElevenLabs]].
-- **Google Gemini** will be a second cloud provider.
+- **ElevenLabs**, **OpenAI**, **Google Gemini** and **Amazon Polly** are cloud providers: each needs an internet connection and an account with that service. See [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
+- OpenAI, Google Gemini and Amazon Polly were added in 1.2.0 and have been tested on macOS, iPhone and iPad. ElevenLabs has been tested on every platform marked **Tested**.
 - **Apple OS (Local)** will use the text to speech built into Apple's operating systems, with no network or account, so it only applies to Apple platforms.
 - VisionOS runs the iPad version of Obsidian. There is no Obsidian web app, so a browser is not a supported platform.
 

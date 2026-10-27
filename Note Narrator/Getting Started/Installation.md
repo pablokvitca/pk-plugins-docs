@@ -6,8 +6,8 @@ tags:
   - getting-started
 publish: true
 permalink: note-narrator/getting-started/installation
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Installation
@@ -18,8 +18,8 @@ updated: 2026-09-27
 | --- | --- |
 | Obsidian | **1.13.1 or newer** (the settings tab uses the declarative settings API) |
 | Platforms | Desktop and mobile. See [[Supported Platforms]] for what has been tested |
-| Account | An [ElevenLabs](https://elevenlabs.io) account and API key |
-| Network | Internet access to `api.elevenlabs.io` when you read or regenerate. See [[Privacy and Network Use]] |
+| Account | An account and API key with one provider: ElevenLabs, OpenAI, Google Gemini or Amazon Polly. See [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] or [[Setting Up Amazon Polly]] |
+| Network | Internet access to your provider when you read or regenerate. See [[Privacy and Network Use]] |
 
 ## Option 1: Community plugins (recommended)
 

@@ -7,13 +7,13 @@ tags:
   - performance
 publish: true
 permalink: note-narrator/using/long-notes-and-chunking
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Long Notes and Chunking
 
-ElevenLabs limits how much text one request can hold, so Note Narrator splits a note into **chunks**, generates them, and plays them in order.
+Every provider limits how much text one request can hold, so Note Narrator splits a note into **chunks**, generates them, and plays them in order. The limit depends on the provider, and for ElevenLabs on the model: see the table on [[Providers Settings#Character limits]].
 
 ## Text chunker
 
@@ -41,7 +41,14 @@ ElevenLabs limits how much text one request can hold, so Note Narrator splits a 
 - More parallelism finishes long notes sooner, but makes more simultaneous requests and hits rate limits sooner.
 
 > [!warning] Rate limits
-> On an HTTP 429 from ElevenLabs, requests retry with exponential backoff (up to 8 retries, with the wait capped at 30 seconds) and generation falls back to one chunk at a time for the **rest of that read**. Each new read starts again at your configured parallelism.
+> When the provider rate-limits a request, it's retried with a growing, slightly random wait, and generation falls back to one chunk at a time for the **rest of that read**. Each new read starts again at your configured parallelism.
+>
+> | Provider | Rate limited when | Retries | Longest wait |
+> | --- | --- | --- | --- |
+> | ElevenLabs | HTTP 429 | 8 | 30 seconds |
+> | OpenAI | HTTP 429. Waits as long as OpenAI asks, when it says | 6 | 20 seconds |
+> | Google Gemini | HTTP 429. Waits as long as Google asks, when it says | 6 | 60 seconds |
+> | Amazon Polly | HTTP 429, or a 400 that says it's throttling | 6 | 15 seconds |
 
 ## Saved audio and chunks
 

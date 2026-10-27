@@ -7,16 +7,16 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/using/saving-audio
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
 # Saving Audio
 
-Saving turns each read into an `.mp3` in your vault so you can replay it later without spending more credits.
+Saving turns each read into an audio file in your vault so you can replay it later without paying for it again. It's an `.mp3`, or a `.wav` with Google Gemini, whose audio comes as WAV (larger files).
 
 > [!abstract] Three layers
-> 1. **Save generated audio to a file**: write the `.mp3`. Disabled by default.
+> 1. **Save generated audio to a file**: write the audio file. Disabled by default.
 > 2. **Link saved audio in the note**: record the link and tracking data in the note's frontmatter. **Enabled by default**, and turning on layer 1 turns it on too.
 > 3. **Auto-generate on open**: keep audio fresh in the background. Disabled by default. Needs layers 1 and 2.
 
@@ -60,10 +60,10 @@ The hash lets the panel tell you whether the audio still matches the note:
 
 **On regenerate** decides what happens to the old file:
 
-- **Replace existing file** (default): overwrite in place. If the voice changed, the file keeps its original name with the old voice in brackets, only its contents change.
+- **Replace existing file** (default): overwrite in place. If the voice changed, the file keeps its original name with the old voice in brackets, only its contents change. If the new narrator's provider saves another format (for example Google Gemini's `.wav` replacing an `.mp3`), the file is renamed to the new extension first.
 - **Keep old versions**: make a new file each time.
 
-Only an `.mp3` counts as a note's saved audio. If the audio path property was edited to point at something else (another note, for example), Note Narrator never overwrites or trashes it: it saves a new file instead.
+Only an `.mp3` or `.wav` counts as a note's saved audio. If the audio path property was edited to point at something else (another note, for example), Note Narrator never overwrites or trashes it: it saves a new file instead.
 
 > [!note] Copies of a note
 > A copy of a note (for example from **Make a copy**) keeps the original's properties, so both point at the same audio file. Regenerating or clearing either one leaves that shared file alone, with a notice: regenerating saves a new file, and clearing only removes the copy's properties.
@@ -75,14 +75,14 @@ Opening a note silently regenerates and saves its audio if it is missing or outd
 
 If you select **Read** or **Background** for the note while it is still generating, that takes over: the auto-generation stops and nothing it generated is saved. Deleting the note also stops it, so no audio file is left behind.
 
-> [!danger] Costs credits
-> Every open of a missing or outdated note makes ElevenLabs requests. Be careful with notes you edit often.
+> [!danger] Costs money
+> Every open of a missing or outdated note makes requests to your provider, which it charges for. Be careful with notes you edit often.
 
 ## Clearing
 
 **Clear Note Narrator files** (panel **⋮** menu, or the delete button on the status line) removes a note's audio file and its properties after a confirmation. The file goes to the trash according to your vault's deletion preference. The properties cannot be restored. If the note has a finished background job, it is cleared from the list too. One still generating is kept, and its new audio is saved when it finishes.
 
-If a linked file is deleted or moved outside Note Narrator, the plugin can quietly remove the stale properties so the note does not show a misleading "outdated" status. The same happens when the audio path property doesn't name an `.mp3` file. That is **Auto-clean up properties when saved file is missing** (enabled by default).
+If a linked file is deleted or moved outside Note Narrator, the plugin can quietly remove the stale properties so the note does not show a misleading "outdated" status. The same happens when the audio path property doesn't name an `.mp3` or `.wav` file. That is **Auto-clean up properties when saved file is missing** (enabled by default).
 
 ## Where does it go?
 

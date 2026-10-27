@@ -7,7 +7,7 @@ tags:
   - faq
 publish: true
 permalink: note-narrator/reference/troubleshooting
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -17,9 +17,13 @@ updated: 2026-10-26
 
 The icons only open the panel. Click **Read** in the panel, or run **Read note aloud**. See [[Reading a Note]].
 
-## "Set an API key for the ... provider in the Note Narrator settings."
+## "Set the API key for the ... provider in the Note Narrator settings."
 
-The provider your active narrator profile uses has no API key yet. Open **Settings, Note Narrator, Providers**, open that provider, and choose an API key. Providers with no key show a warning marker. See [[Setting Up ElevenLabs]].
+The provider your active narrator profile uses has no key yet ("Set the access keys" for Amazon Polly, which needs both keys and a region). Open **Settings, Note Narrator, Providers**, open that provider, and choose its key. Providers with no key show a warning marker. See [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] or [[Setting Up Amazon Polly]].
+
+## A provider's request failed (401, 403 or similar)
+
+The notice names the provider and starts with its answer. Usually the key is wrong, has expired, or lacks a permission Note Narrator needs, or (for Amazon Polly) the region or the user's policy doesn't allow `polly:SynthesizeSpeech`. Check the key against that provider's setup guide.
 
 ## "Add a provider and a narrator profile in the Note Narrator settings."
 
@@ -27,15 +31,15 @@ There is no usable narrator profile (for example after deleting the last provide
 
 ## The voice dropdown is empty
 
-In a narrator profile, the **Voice** list comes from its provider's account. Set the provider's API key, then press the refresh button next to **Voice**. See [[Profiles Settings]].
+For ElevenLabs, a narrator profile's **Voice** list comes from the provider's account. Set the provider's API key, then press the refresh button next to **Voice**. OpenAI, Google Gemini and Amazon Polly have fixed voice lists, so theirs are never empty (Amazon Polly lists the voices of the chosen **Engine**). See [[Profiles Settings]].
 
 ## A narrator is missing from the panel dropdown
 
 Only profiles with **Show in panel dropdown** on appear, plus the active one. Turn it on in the profile's page. See [[Profiles Settings]].
 
-## "ElevenLabs rate limit hit"
+## "ElevenLabs rate limit hit" (or OpenAI, Google Gemini, Amazon Polly)
 
-You are making requests faster than your plan allows. Note Narrator retries and switches to one chunk at a time. To avoid it, lower **Max parallel chunk generation** and **Max parallel background chunk generation** on the provider. See [[Providers Settings]].
+You are making requests faster than your plan or quota allows. Note Narrator retries and switches to one chunk at a time. To avoid it, lower **Max parallel chunk generation** and **Max parallel background chunk generation** on the provider. See [[Providers Settings]].
 
 ## Highlighting does not show
 
@@ -59,13 +63,13 @@ HTML comments are read as text. See [[Known Limitations]].
 
 ## FAQ
 
-**Does it work offline?** Not yet. It needs ElevenLabs. Local voices are planned. See [[Roadmap]].
+**Does it work offline?** Not yet. Every provider so far is a cloud service. Local voices are planned. See [[Roadmap]].
 
 **Does it work on mobile?** Yes. It has been tested on iPhone, iPad, iPad mini and visionOS. Android has not been tested. See [[Supported Platforms]].
 
-**How much does it cost?** The plugin is free. ElevenLabs charges credits for generated audio. Saved audio replays for free.
+**How much does it cost?** The plugin is free. Your provider charges for generated audio: credits on your ElevenLabs plan, or OpenAI's, Google's or AWS's API prices. Each setup guide links to its pricing page and shows how to set a spending limit. Saved audio replays for free.
 
-**Can I use other voice providers?** Not yet. Providers have a type, and only ElevenLabs is implemented, so other services can be added later. You can already add several ElevenLabs providers, for example two accounts. See [[Providers Settings]] and [[Roadmap]].
+**Can I use other voice providers?** Yes: ElevenLabs, OpenAI, Google Gemini and Amazon Polly, since 1.2.0. Add one with **+** under **Providers**, and you can add several of the same type, for example two accounts. Local voices are planned. See [[Providers Settings]] and [[Roadmap]].
 
 **Can I rename the audio properties?** Yes, in [[Files Settings]].
 

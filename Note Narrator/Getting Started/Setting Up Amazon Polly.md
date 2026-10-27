@@ -55,11 +55,26 @@ AWS updates budgets a few times a day, so the block isn't instant and spending c
 ## 3. Add it to Note Narrator
 
 1. In Obsidian, open **Settings, Note Narrator, Providers**, select **+** and choose **Amazon Polly** (or switch an existing provider's **Type** to Amazon Polly).
-2. Under **Access key ID** and **Secret access key**, pick or create a secret for each and paste the values.
+
+   ![[settings-add-provider-menu.png]]
+
+2. Open the new provider. Under **Access key ID** and **Secret access key**, pick or create a secret for each and paste the values. The **Setting up Amazon Polly keys safely** link opens this guide.
 3. Choose the **Region** Polly requests go to, ideally one near you. Some voices and engines are only offered in some regions.
+
+   ![[settings-provider-amazon-polly.png]]
 
 > [!info] Where the keys live
 > Both keys are stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage), not in the plugin's `data.json`. The secret access key is never sent: it only signs each request.
+
+## 4. Set up a narrator profile
+
+Adding the provider also added a narrator profile for it, named **Default (Amazon Polly)**, so you can read with it straight away.
+
+1. Open **Settings, Note Narrator, Profiles** and select **Default (Amazon Polly)** (or add a profile with **+** and set its **Provider** to this one).
+2. Under **Voice**, choose a voice and the other settings below.
+3. Select **Use as default narrator**, or pick the profile in the panel's narrator dropdown.
+
+![[settings-profile-voice-amazon-polly.png]]
 
 ## Engines and voices
 

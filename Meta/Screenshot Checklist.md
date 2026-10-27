@@ -23,7 +23,9 @@ Each placeholder in the docs is a `> [!todo] Screenshot needed: ...` callout. To
 
 - [x] `hero-panel-and-note.png` on [[Note Narrator]]. Note in Editing view, panel open mid-playback, margin marker visible
 - [x] `install-brat-add-plugin.png` on [[Installation]]. BRAT's Add a beta plugin dialog
-- [x] `settings-api-key.png` on [[Quick Start]]. The provider's API key control filled (hide the key)
+- [x] `settings-add-provider-menu.png` on [[Quick Start]], [[Providers Settings]] and each provider's setup guide. The Providers list with the **+** menu open (the menu is drawn with Obsidian's menu markup: a script can't open a real one in the settings window)
+- [x] `settings-provider-elevenlabs.png`, `-openai`, `-google-gemini`, `-amazon-polly` on each setup guide (OpenAI's also on [[Quick Start]] and [[Providers Settings]], Amazon Polly's also on [[Providers Settings]]). The provider's page, key set, with the guide link
+- [x] `settings-profile-voice-elevenlabs.png`, `-openai`, `-google-gemini`, `-amazon-polly` on each setup guide and [[Profiles Settings]] (OpenAI's also on [[Quick Start]]). The profile page down to the Voice section
 - [x] `open-panel-ribbon-and-toolbar.png` on [[Quick Start]]. Ribbon icon and toolbar icon called out
 - [x] `panel-reading.png` on [[Quick Start]]. Panel while reading
 
@@ -43,8 +45,6 @@ Each placeholder in the docs is a `> [!todo] Screenshot needed: ...` callout. To
 
 - [x] `settings-tab-overview.png` on [[Settings Overview]]. The tab bar, General selected
 - [x] `settings-general.png` on [[General Settings]] (plus a variant with comment skipping off)
-- [x] `settings-providers-list.png` on [[Providers Settings]]. Two providers and the + button
-- [x] `settings-provider-page.png` on [[Providers Settings]]. Connection and Generation groups
 - [x] `settings-profiles-list.png` on [[Profiles Settings]]. Default narrator dropdown and two profiles
 - [x] `settings-profile-page.png` on [[Profiles Settings]]. Profile, Voice and Reading overrides groups
 - [x] `settings-appearance.png` on [[Appearance Settings]]. Highlighting on so dependents are enabled
