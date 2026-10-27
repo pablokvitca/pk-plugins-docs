@@ -8,7 +8,7 @@ aliases:
   - Note Narrator docs
 publish: true
 permalink: note-narrator
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -37,7 +37,7 @@ Note Narrator is an Obsidian plugin that **reads your notes aloud** using text t
 ### Getting started
 - [[Installation]]: BRAT, manual install, requirements
 - [[Quick Start]]: from install to your first read
-- [[Setting Up ElevenLabs]]: API key, voices and models
+- [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]]: a limited, expiring key for each provider, then voices and models
 - [[Providers Settings]] and [[Profiles Settings]]: how providers and narrator profiles fit together
 
 ### Using Note Narrator

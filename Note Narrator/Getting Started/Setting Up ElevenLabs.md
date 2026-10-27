@@ -1,14 +1,14 @@
 ---
 title: Setting Up ElevenLabs
-description: Create an ElevenLabs API key, store it safely in Obsidian, and choose a voice and model in a narrator profile.
+description: Create a limited, expiring ElevenLabs API key, store it safely in Obsidian, and choose a voice and model in a narrator profile.
 tags:
   - note-narrator
   - getting-started
   - elevenlabs
 publish: true
 permalink: note-narrator/getting-started/setting-up-elevenlabs
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Setting Up ElevenLabs
@@ -17,9 +17,22 @@ Note Narrator generates speech with ElevenLabs, so you need an account with an A
 
 ## API key
 
-1. Sign in at [elevenlabs.io](https://elevenlabs.io) and create an API key in your account settings.
-2. In Obsidian, open **Settings, Note Narrator, Providers** and open (or add) an ElevenLabs provider.
-3. Under **API key**, pick an existing secret or create a new one and paste the key.
+> [!warning] Keep the key limited
+> Note Narrator only needs to turn text into speech and list your voices. Give the key **only those permissions**, a **credit limit**, and an **expiration date** if your account allows one. Don't create an unrestricted key, a key without a credit limit, or a key that never expires: if it leaks, anyone can spend your credits until you notice.
+
+1. Sign in at [elevenlabs.io](https://elevenlabs.io) and open **Developers, API Keys** (or [your API keys settings](https://elevenlabs.io/app/settings/api-keys)), then select **Create Key**.
+2. Give it a name you will recognize, such as "Note Narrator".
+3. Keep **Restrict Key** on, and allow only:
+   - **Text to Speech**: Access.
+   - **Voices**: Read, so the voice list and saved file names work.
+   - Leave everything else at No Access.
+4. Set a **credit limit**: the most this key may spend. Pick a number you would be comfortable losing, and raise it later if you need to.
+5. Set **Expire After**, for example to **30 days**, the longest preset ElevenLabs offers for personal keys. Don't leave it on **Never**.
+6. Create the key and copy it: ElevenLabs shows it only once.
+7. In Obsidian, open **Settings, Note Narrator, Providers** and open (or add) an ElevenLabs provider.
+8. Under **API key**, pick an existing secret or create a new one and paste the key.
+
+When the key expires, reads fail with an authentication error. Create a new key the same way and paste it into the same secret. ElevenLabs' labels can change: see their [API key documentation](https://elevenlabs.io/docs/overview/administration/workspaces/api-keys) for the current options.
 
 Adding a provider with **+** also creates a narrator profile called **Default (provider name)** for it, so you can pick a voice and read straight away.
 
@@ -56,3 +69,24 @@ The character limit is the size of one request. Longer notes are split into seve
 ## Rate limits
 
 If ElevenLabs answers with a rate limit (HTTP 429), Note Narrator retries automatically with exponential backoff (up to 8 retries, with the wait capped at 30 seconds) and switches to one chunk at a time for the rest of that read. Parallelism is set per provider. See [[Providers Settings]].
+
+## Official links
+
+ElevenLabs' own pages, for anything this guide doesn't cover or that has changed since.
+
+**Documentation**
+- [API keys](https://elevenlabs.io/docs/overview/administration/workspaces/api-keys): creating, restricting, expiring and rotating keys
+- [Authentication](https://elevenlabs.io/docs/api-reference/authentication)
+- [Text to speech API](https://elevenlabs.io/docs/api-reference/text-to-speech/convert): what Note Narrator calls to generate audio
+- [Voices API](https://elevenlabs.io/docs/api-reference/voices/search): what the voice list comes from
+- [Models](https://elevenlabs.io/docs/models)
+
+**Terms and policies**
+- [Terms of Service](https://elevenlabs.io/terms-of-use)
+- [Privacy Policy](https://elevenlabs.io/privacy-policy)
+- [Prohibited Use Policy](https://elevenlabs.io/use-policy)
+
+**Pricing and billing**
+- [Plans and pricing](https://elevenlabs.io/pricing) and [API pricing](https://elevenlabs.io/pricing/api): what audio costs in credits
+- [Your subscription](https://elevenlabs.io/app/subscription): plan, credits left and usage-based billing
+- [Usage](https://elevenlabs.io/app/usage): what you have used so far
