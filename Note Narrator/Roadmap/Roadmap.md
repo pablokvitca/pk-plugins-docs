@@ -7,7 +7,7 @@ tags:
 publish: true
 permalink: note-narrator/roadmap
 plugin-version: 1.2.0
-updated: 2026-10-26
+updated: 2026-10-27
 ---
 
 # Roadmap
@@ -15,12 +15,9 @@ updated: 2026-10-26
 > [!warning] Not a promise
 > This is direction, not a schedule. Ideas move between milestones, get reshaped, or get dropped. Version numbers show intended order, not dates.
 
-## In beta
-
-- **1.2.0: more providers.** Read with **OpenAI**, **Google Gemini** or **Amazon Polly** as well as ElevenLabs. The **+** button under **Providers** now lists the provider types and adds one only once you choose. Each provider has its own key settings (Amazon Polly takes AWS access keys and a region), voice settings in its narrator profiles, and a link to a guide for creating a key with only the permissions it needs, a spending limit and an expiration date. Google Gemini's audio is saved as `.wav` and still plays back part by part. Also fixed: a renamed provider or profile now shows its new name in the settings lists right away. Test it with BRAT's beta versions. See [[Providers Settings]] and [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
-
 ## Recently shipped
 
+- **1.2.0: more providers.** Read with **OpenAI**, **Google Gemini** or **Amazon Polly** as well as ElevenLabs. The **+** button under **Providers** now lists the provider types and adds one only once you choose. Each provider has its own key settings (Amazon Polly takes AWS access keys and a region), voice settings in its narrator profiles, and a link to a guide for creating a key with only the permissions it needs, a spending limit and an expiration date. Google Gemini's audio is saved as `.wav` and still plays back part by part. Also fixed: a renamed provider or profile now shows its new name in the settings lists right away, and a provider page's general settings sit at the top without a heading. See [[Providers Settings]] and [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
 - **1.1.6: fixes and centered panel text.** The note title is never read on its own as the first part anymore, so playback no longer pauses after it. Before, that happened when only a comment or a `---` line came before the first heading, when the first section was skipped, or when quick start's first part had room for nothing but the title. With **Read note properties** off, editing a property no longer marks saved audio or background notes as outdated, since properties are not heard. A new **Center panel text** setting (on by default) centers the panel's note stats, progress line and time readout. See [[Appearance Settings]].
 - **1.1.5: fixes and disclosure.** Background notes edited since they were generated, or made with another narrator, are marked **Outdated** on their card. A new **Protect audio shared with copied notes** setting (on by default) controls the check that keeps a copied note from overwriting or trashing the original's audio; it's the only time Note Narrator looks at other notes, and it's now described in [[Privacy and Network Use]]. Every dropdown marks its default option, ElevenLabs error messages are kept short, and a development-only dependency was updated for a security advisory.
 - **1.1.4: fixes.** Edit a note while it's being read, or play its outdated saved audio, and **Read** now offers **Regenerate** instead of staying a disabled "Reading". It also comes back as **Read** if you delete the saved audio while it plays. Only an `.mp3` counts as a note's saved audio, so an edited audio path property can no longer get another file overwritten or trashed, and a copy of a note no longer replaces or trashes the audio it shares with the original. Background notes whose audio is saved are freed from memory and play from the vault, and unsaved finished notes are capped by the new **Unsaved finished notes kept in memory** setting (see [[Performance Settings]]). Notes saved with Windows (CRLF) line endings no longer have their properties read aloud or their highlight drift, a property edited just before Read is spoken with its new value, and audio saved by **Auto-generate on open** with quick start on keeps its parts for Previous/Next instead of playing as one piece.
