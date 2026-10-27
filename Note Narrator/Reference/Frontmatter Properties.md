@@ -7,7 +7,7 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/reference/frontmatter-properties
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -17,9 +17,9 @@ When **Link saved audio in the note** is on, Note Narrator writes six properties
 
 | Property | Contains |
 | --- | --- |
-| `note_narrator_audio` | A wikilink to the saved `.mp3`, so Obsidian shows and tracks it |
+| `note_narrator_audio` | A wikilink to the saved `.mp3` or `.wav`, so Obsidian shows and tracks it |
 | `note_narrator_audio_hash` | Hash of the note's content when the audio was made, used for [[Saving Audio#Linking and staleness\|staleness]]. Its prefix is the hash version (`v3:` since 1.1.6), so older audio keeps being checked the way it was saved |
-| `note_narrator_audio_path` | Raw vault path of the file, used internally. Only an `.mp3` path counts: anything else is treated as no saved audio |
+| `note_narrator_audio_path` | Raw vault path of the file, used internally. Only an `.mp3` or `.wav` path counts: anything else is treated as no saved audio |
 | `note_narrator_audio_timestamp` | When the audio was generated |
 | `note_narrator_audio_voice` | A fingerprint (hash) of the narrator profile's voice settings that made the audio. Notes saved before 0.17 hold the raw ElevenLabs voice ID here, which still counts as a match for that voice |
 | `note_narrator_audio_chunk_durations` | A list of `[duration in seconds, byte length]` pairs, one per chunk |

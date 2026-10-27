@@ -7,8 +7,8 @@ tags:
   - saved-audio
 publish: true
 permalink: note-narrator/settings/files
-plugin-version: 1.1.5
-updated: 2026-10-09
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Files Settings
@@ -30,7 +30,7 @@ Everything except the first setting is **greyed out until saving is on**, and th
 
 | Setting | Default | Greyed out when | What it does |
 | --- | --- | --- | --- |
-| **Save generated audio to a file** | Disabled | never | Saves each read as an `.mp3` in the vault |
+| **Save generated audio to a file** | Disabled | never | Saves each read as an audio file in the vault: `.mp3`, or `.wav` with Google Gemini |
 | **Save location** | Same folder as the note | Saving is off | Same folder, or a custom folder |
 | **Custom folder path** | `Note Narrator Audio` | Saving is off, or location is not Custom folder | Vault-relative folder, created if missing. Empty falls back to the default |
 | **On regenerate** | Replace existing file | Saving or linking is off | **Replace existing file** or **Keep old versions** |
@@ -58,10 +58,10 @@ Everything except the first setting is **greyed out until saving is on**, and th
 | Setting | Default | Greyed out when | What it does |
 | --- | --- | --- | --- |
 | **Show "Clear Note Narrator files" menu item and delete button** | Enabled | Saving or linking is off | Enables the panel menu item and the status-line delete button |
-| **Auto-clean up properties when saved file is missing** | Enabled | Saving or linking is off | Removes stale properties if the linked file no longer exists, or the audio path property doesn't name an `.mp3` file |
+| **Auto-clean up properties when saved file is missing** | Enabled | Saving or linking is off | Removes stale properties if the linked file no longer exists, or the audio path property doesn't name an `.mp3` or `.wav` file |
 
-> [!danger] Auto-generate on open spends credits
-> It makes provider requests every time you open a note that is missing audio or outdated. Leave it off for notes you edit constantly.
+> [!danger] Auto-generate on open costs money
+> It makes provider requests, which your provider charges for, every time you open a note that is missing audio or outdated. Leave it off for notes you edit constantly.
 
 > [!warning] Deleting is permanent for properties
 > Clearing moves the file to trash per your vault setting, but the properties are removed with no undo.

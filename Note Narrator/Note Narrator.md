@@ -1,6 +1,6 @@
 ---
 title: Note Narrator
-description: Note Narrator reads your Obsidian notes aloud with ElevenLabs text to speech. Documentation, setup, settings reference and roadmap.
+description: Note Narrator reads your Obsidian notes aloud with text to speech from ElevenLabs, OpenAI, Google Gemini or Amazon Polly. Documentation, setup, settings reference and roadmap.
 tags:
   - note-narrator
   - docs
@@ -17,7 +17,7 @@ updated: 2026-10-26
 > [!info] Part of PK Plugins
 > This is the documentation for one plugin. See [[index|PK Plugins]] for the rest.
 
-Note Narrator is an Obsidian plugin that **reads your notes aloud** using text to speech. It ships with [ElevenLabs](https://elevenlabs.io) as its voice provider, plays audio while it is still being generated, and can save the result as an `.mp3` linked from the note.
+Note Narrator is an Obsidian plugin that **reads your notes aloud** using text to speech. It works with four voice providers, [ElevenLabs](https://elevenlabs.io), [OpenAI](https://developers.openai.com/api/docs/guides/text-to-speech), [Google Gemini](https://ai.google.dev/gemini-api/docs/speech-generation) and [Amazon Polly](https://aws.amazon.com/polly/), plays audio while it is still being generated, and can save the result as an audio file linked from the note.
 
 > [!tip] New here?
 > Start with [[Installation]], then follow the [[Quick Start]]. You will be listening to a note in a few minutes.
@@ -68,4 +68,4 @@ Note Narrator is an Obsidian plugin that **reads your notes aloud** using text t
 > These docs describe version **1.1**. If you are on 0.16.x, the settings screen looks different from these pages -- 0.17 reorganised it around providers and narrator profiles. Something wrong or missing? Open an issue on the [GitHub repository](https://github.com/pablokvitca/note-narrator).
 
 > [!note] Independent project
-> Note Narrator is an independent project. It is not affiliated with, endorsed by, or sponsored by Obsidian or ElevenLabs. "Obsidian" and "ElevenLabs" are trademarks of their respective owners and are used here only to describe what the plugin works with. See [[Privacy and Network Use]] for how your data is handled.
+> Note Narrator is an independent project. It is not affiliated with, endorsed by, or sponsored by Obsidian, ElevenLabs, OpenAI, Google or Amazon Web Services. Their names are trademarks of their respective owners and are used here only to describe what the plugin works with. See [[Privacy and Network Use]] for how your data is handled.

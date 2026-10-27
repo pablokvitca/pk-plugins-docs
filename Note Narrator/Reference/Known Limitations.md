@@ -7,7 +7,7 @@ tags:
   - limitations
 publish: true
 permalink: note-narrator/reference/known-limitations
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -28,7 +28,8 @@ Things that do not work the way you might expect yet. Many have a planned fix on
 
 - **Staleness is whole-note.** The hash covers the note's full text, so editing anything, even outside what was read (for example after reading a selection), marks the audio outdated. Properties only count with **Read note properties** on, except for audio saved before 1.1.6, which counts them until it's regenerated.
 - **Replace keeps the old filename.** With "Replace existing file", a narrator change keeps the original filename (with the old voice name in brackets) and only replaces the contents.
-- **Multi-part files are concatenated bytes.** Chunks are joined without re-muxing the MP3 stream. This works with ElevenLabs output but is not strictly spec-correct MP3 concatenation.
+- **Multi-part MP3 files are concatenated bytes.** MP3 chunks are joined without re-muxing the stream. This works with ElevenLabs', OpenAI's and Amazon Polly's output but is not strictly spec-correct MP3 concatenation. Google Gemini's WAV chunks are joined properly into one WAV file.
+- **WAV files are large.** Google Gemini's audio is saved uncompressed (24 kHz, 16-bit mono), about three times the size of a typical MP3 of the same length.
 - **Part navigation can fall back.** During Play saved, if chunk-affecting settings changed since the audio was made, or the byte lengths do not add up, the file plays as a single non-navigable piece even though the note still says "up to date". Regenerate to fix it.
 - **Clear has no undo** for the properties. The file goes to trash per your vault setting.
 
@@ -43,17 +44,19 @@ Things that do not work the way you might expect yet. Many have a planned fix on
 - Highlighting needs Editing view. It cannot draw in Reading view.
 - Neither highlighting nor scroll-to-current applies to selection reads.
 
-## ElevenLabs
+## Providers
 
-- Only the first **100 voices** on a provider's account are listed in a profile's voice dropdown.
 - The rate limit fallback to one chunk at a time only lasts for the read in progress. Parallel generation is set per provider.
-- Eleven v3 is a research preview and can mispronounce or invent words. Professional Voice Clones are not fully optimized for it yet.
-- **Auto-generate on open** spends credits on every open of a missing or outdated note.
+- **Auto-generate on open** costs money on every open of a missing or outdated note, with every provider.
+- **ElevenLabs:** only the first **100 voices** on a provider's account are listed in a profile's voice dropdown. Eleven v3 is a research preview and can mispronounce or invent words, and Professional Voice Clones are not fully optimized for it yet.
+- **OpenAI, Google Gemini and Amazon Polly** have fixed voice lists built into the plugin. A voice the service adds later isn't offered until a plugin update. Amazon Polly's custom Brand Voices aren't listed.
+- **Google Gemini's** text to speech models are previews, and Google may change or replace them. Its part limit (5,000 characters) is a cautious choice, since Google documents none.
+- **Amazon Polly:** some voices and engines are only offered in some regions. A voice the region doesn't have fails when you read.
 
 ## Platform
 
 - Requires Obsidian 1.13.1 or newer.
-- Requires an ElevenLabs account. ElevenLabs is the only provider type so far, though you can add several ElevenLabs providers. No offline or local voice yet.
+- Requires an account with ElevenLabs, OpenAI, Google Gemini or Amazon Polly. No offline or local voice yet.
 
 > [!question] Found something not listed?
 > Open an issue on the [GitHub repository](https://github.com/pablokvitca/note-narrator).

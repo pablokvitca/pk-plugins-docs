@@ -32,7 +32,7 @@ OpenAI notes that spending is tracked with a short delay, so it can go slightly 
 
 1. In the project, open **API keys** and create a new secret key, owned by you or by a service account.
 2. Name it, for example "Note Narrator".
-3. Set **Permissions** to **Restricted**, and allow only the model requests Note Narrator makes (the **Model capabilities** group, which includes text to speech at `/v1/audio/speech`). Leave everything else at **None**.
+3. Set **Permissions** to **Restricted**, and allow only the model `Request`s. Note Narrator makes (the **Model capabilities** group, which includes text to speech at `/v1/audio/speech`). Leave everything else at **None**.
 4. Set an **expiration date**. OpenAI recommends one for every project key. A few months is a reasonable start.
 5. Create the key and copy it: OpenAI shows it only once.
 
@@ -41,12 +41,27 @@ If reads fail with a "missing scope" error, the key is missing the text to speec
 ## 3. Add it to Note Narrator
 
 1. In Obsidian, open **Settings, Note Narrator, Providers**, select **+** and choose **OpenAI** (or switch an existing provider's **Type** to OpenAI).
-2. Under **API key**, pick an existing secret or create a new one and paste the key.
+
+   ![[settings-add-provider-menu.png]]
+
+2. Open the new provider. Under **API key**, pick an existing secret or create a new one and paste the key. The **Setting up OpenAI keys safely** link under it opens this guide.
+
+   ![[settings-provider-openai.png]]
 
 > [!info] Where the key lives
 > The key is stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage), not in the plugin's `data.json`. Only the secret's name is saved (`openai-api-key` by default).
 
 When the key expires, reads fail with an authentication error. Create a new key the same way and paste it into the same secret.
+
+## 4. Set up a narrator profile
+
+Adding the provider also added a narrator profile for it, named **Default (OpenAI)**, so you can read with it straight away.
+
+1. Open **Settings, Note Narrator, Profiles** and select **Default (OpenAI)** (or add a profile with **+** and set its **Provider** to this one).
+2. Under **Voice**, choose a voice and the other settings below.
+3. Select **Use as default narrator**, or pick the profile in the panel's narrator dropdown.
+
+![[settings-profile-voice-openai.png]]
 
 ## Voices, models and settings
 

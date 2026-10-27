@@ -40,10 +40,25 @@ Don't reuse a Google Cloud key that can call other Google APIs. See Google's [AP
 ## 3. Add it to Note Narrator
 
 1. In Obsidian, open **Settings, Note Narrator, Providers**, select **+** and choose **Google Gemini** (or switch an existing provider's **Type** to Google Gemini).
-2. Under **API key**, pick an existing secret or create a new one and paste the key.
+
+   ![[settings-add-provider-menu.png]]
+
+2. Open the new provider. Under **API key**, pick an existing secret or create a new one and paste the key. The **Setting up Google Gemini keys safely** link under it opens this guide.
+
+   ![[settings-provider-google-gemini.png]]
 
 > [!info] Where the key lives
 > The key is stored with Obsidian's [secret storage](https://docs.obsidian.md/plugins/guides/secret-storage), not in the plugin's `data.json`. Only the secret's name is saved (`gemini-api-key` by default).
+
+## 4. Set up a narrator profile
+
+Adding the provider also added a narrator profile for it, named **Default (Google Gemini)**, so you can read with it straight away.
+
+1. Open **Settings, Note Narrator, Profiles** and select **Default (Google Gemini)** (or add a profile with **+** and set its **Provider** to this one).
+2. Under **Voice**, choose a voice and the other settings below.
+3. Select **Use as default narrator**, or pick the profile in the panel's narrator dropdown.
+
+![[settings-profile-voice-google-gemini.png]]
 
 ## Voices, models and settings
 

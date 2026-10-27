@@ -6,7 +6,7 @@ tags:
   - usage
 publish: true
 permalink: note-narrator/using/reading-a-note
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -24,11 +24,11 @@ There are two ways, and they differ on purpose:
 | **Read note aloud** command | Yes | Yes |
 
 > [!tip] Why opening does not read
-> Reading costs credits, so simply looking at the panel never spends any. Only the Read button or the command does.
+> Reading costs money with every provider, so simply looking at the panel never spends any. Only the Read button or the command does.
 
 ## What gets read
 
-Before text goes to ElevenLabs, Markdown is cleaned up so it is not spoken literally: links, emphasis, code blocks, frontmatter and similar syntax are stripped.
+Before text goes to your provider, Markdown is cleaned up so it is not spoken literally: links, emphasis, code blocks, frontmatter and similar syntax are stripped.
 
 In order, the spoken text can include:
 

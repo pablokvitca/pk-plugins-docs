@@ -6,7 +6,7 @@ tags:
   - settings
 publish: true
 permalink: note-narrator/settings/overview
-plugin-version: 1.1.6
+plugin-version: 1.2.0
 updated: 2026-10-26
 ---
 
@@ -35,7 +35,7 @@ Open **Settings, Note Narrator**. A tab bar at the top switches between six sect
 
 | Setting | Default |
 | --- | --- |
-| **Providers** | One ElevenLabs provider, key secret name `elevenlabs-api-key` |
+| **Providers** | One ElevenLabs provider, key secret name `elevenlabs-api-key`. Add OpenAI, Google Gemini or Amazon Polly providers with **+** |
 | Generate in parallel / Max parallel / Max background parallel (per provider) | On / 2 / 1 |
 | **Profiles** | One profile, "Default" |
 | Profile voice / model | Rachel (`21m00Tcm4TlvDq8ikWAM`) / Eleven Multilingual v2 |
@@ -70,4 +70,4 @@ Open **Settings, Note Narrator**. A tab bar at the top switches between six sect
 | Auto-clean missing files | Enabled |
 
 > [!note] Settings are per vault
-> Settings live in the vault's plugin `data.json`. API keys do not: they are in Obsidian's secret storage. See [[Setting Up ElevenLabs]].
+> Settings live in the vault's plugin `data.json`. API keys do not: they are in Obsidian's secret storage. See [[Providers Settings]].

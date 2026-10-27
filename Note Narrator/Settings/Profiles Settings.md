@@ -7,8 +7,8 @@ tags:
   - profiles
 publish: true
 permalink: note-narrator/settings/profiles
-plugin-version: 1.1.2
-updated: 2026-10-06
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Profiles Settings
@@ -50,7 +50,13 @@ The settings at the top of the page, without a heading:
 | **Use as default narrator** | Makes this the active profile |
 | **Delete narrator profile** | At the bottom of the page. Removes the profile |
 
-### Voice (ElevenLabs)
+### Voice
+
+The **Voice** section depends on the type of the profile's provider. Switching the profile to a provider of another type replaces these rows with that type's, at their defaults.
+
+#### ElevenLabs
+
+![[settings-profile-voice-elevenlabs.png]]
 
 | Setting | Default | What it does |
 | --- | --- | --- |
@@ -61,6 +67,38 @@ The settings at the top of the page, without a heading:
 
 > [!caution] Eleven v3 is a research preview
 > It can mispronounce or invent words more than Multilingual v2, and Professional Voice Clones are not fully optimized for it yet.
+
+#### OpenAI
+
+![[settings-profile-voice-openai.png]]
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| **Voice** | Alloy | One of OpenAI's 13 built-in voices |
+| **Model** | GPT-4o mini TTS | GPT-4o mini TTS, TTS-1 (faster) or TTS-1 HD (higher quality) |
+| **Speaking speed** | 1 | How fast the voice speaks, from 0.25 to 4, set when the audio is generated. Separate from the panel's playback speed |
+| **Instructions** | empty | Optional guidance on tone, accent or pacing. Greyed out for models that don't use it (only GPT-4o mini TTS does) |
+
+#### Google Gemini
+
+![[settings-profile-voice-google-gemini.png]]
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| **Voice** | Kore | One of Gemini's 30 prebuilt voices |
+| **Model** | Gemini 2.5 Flash TTS (preview) | Gemini 2.5 Flash TTS or Gemini 2.5 Pro TTS, both previews |
+| **Instructions** | empty | Optional guidance on tone and delivery, such as "Say in a calm, warm voice", read by the model before each part |
+
+#### Amazon Polly
+
+![[settings-profile-voice-amazon-polly.png]]
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| **Engine** | Neural | Standard, Neural, Long-form or Generative. They differ in quality and price |
+| **Voice** | Joanna | The chosen engine's voices, with their language. Changing the engine switches to its first voice if the current one doesn't have it |
+
+How to set up each provider's key, and what each one costs: [[Setting Up ElevenLabs]], [[Setting Up OpenAI]], [[Setting Up Google Gemini]] and [[Setting Up Amazon Polly]].
 
 ### Reading overrides
 

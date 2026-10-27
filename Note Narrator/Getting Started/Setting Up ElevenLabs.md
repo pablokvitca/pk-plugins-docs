@@ -29,12 +29,15 @@ Note Narrator generates speech with ElevenLabs, so you need an account with an A
 4. Set a **credit limit**: the most this key may spend. Pick a number you would be comfortable losing, and raise it later if you need to.
 5. Set **Expire After**, for example to **30 days**, the longest preset ElevenLabs offers for personal keys. Don't leave it on **Never**.
 6. Create the key and copy it: ElevenLabs shows it only once.
-7. In Obsidian, open **Settings, Note Narrator, Providers** and open (or add) an ElevenLabs provider.
-8. Under **API key**, pick an existing secret or create a new one and paste the key.
+7. In Obsidian, open **Settings, Note Narrator, Providers** and open your ElevenLabs provider, or select **+** and choose **ElevenLabs** to add one.
+
+   ![[settings-add-provider-menu.png]]
+
+8. Under **API key**, pick an existing secret or create a new one and paste the key. The **Setting up ElevenLabs keys safely** link under it opens this guide.
+
+   ![[settings-provider-elevenlabs.png]]
 
 When the key expires, reads fail with an authentication error. Create a new key the same way and paste it into the same secret. ElevenLabs' labels can change: see their [API key documentation](https://elevenlabs.io/docs/overview/administration/workspaces/api-keys) for the current options.
-
-Adding a provider with **+** also creates a narrator profile called **Default (provider name)** for it, so you can pick a voice and read straight away.
 
 > [!tip] Two accounts?
 > Add a second ElevenLabs provider with its own key (for example personal and work), then point different narrator profiles at each. See [[Providers Settings]].
@@ -44,6 +47,16 @@ Adding a provider with **+** also creates a narrator profile called **Default (p
 
 > [!info] Your plan's terms apply
 > Free ElevenLabs accounts may use the service for non-commercial purposes only. See [[Privacy and Network Use]] for the terms that apply to you.
+
+## Set up a narrator profile
+
+Adding a provider also adds a narrator profile for it, named **Default (ElevenLabs)**, so you can read with it straight away. A new install starts with one ElevenLabs provider and a profile named just **Default**.
+
+1. Open **Settings, Note Narrator, Profiles** and select that profile (or add one with **+** and set its **Provider** to your ElevenLabs provider).
+2. Under **Voice**, choose a voice and the other settings below.
+3. Select **Use as default narrator**, or pick the profile in the panel's narrator dropdown.
+
+![[settings-profile-voice-elevenlabs.png]]
 
 ## Voices
 

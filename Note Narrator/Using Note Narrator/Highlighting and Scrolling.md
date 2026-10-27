@@ -7,8 +7,8 @@ tags:
   - highlighting
 publish: true
 permalink: note-narrator/using/highlighting-and-scrolling
-plugin-version: 1.0.0
-updated: 2026-09-27
+plugin-version: 1.2.0
+updated: 2026-10-26
 ---
 
 # Highlighting and Scrolling
@@ -68,4 +68,4 @@ Both features also work during **Play saved**, as long as the note is up to date
 > Mapping chunk and section positions back to the raw note is proportional, because Markdown stripping changes text length. A boundary can be off by a word or two. A comment containing heading-like text (`# ...`) can also confuse section boundaries.
 
 > [!info] Sentence and word highlighting
-> Not available yet. They would need timing from ElevenLabs, and an early estimate-based version drifted out of sync in testing and was removed. See [[Roadmap]].
+> Not available yet. They would need word timing from the provider, and an early estimate-based version drifted out of sync in testing and was removed. See [[Roadmap]].

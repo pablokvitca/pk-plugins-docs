@@ -15,7 +15,7 @@ This repository is an **Obsidian vault**. Open the folder as a vault in Obsidian
 | Folder | Contents |
 | --- | --- |
 | `Note Narrator/` | Everything for the Note Narrator plugin |
-| `Note Narrator/Getting Started/` | Installation, quick start, ElevenLabs setup |
+| `Note Narrator/Getting Started/` | Installation, quick start, and setting up each provider's key |
 | `Note Narrator/Using Note Narrator/` | The panel, reading, playback, saving, highlighting, background jobs, commands |
 | `Note Narrator/Settings/` | One page per settings group |
 | `Note Narrator/Reference/` | Frontmatter properties, supported platforms, limitations, privacy, troubleshooting |
